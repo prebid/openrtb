@@ -75,3 +75,6 @@ Using both pointer and `omitempty` is mostly just to save traffic / generate mor
 - File names are in underscore_case, e.g., `type BidRequest` should be declared in `bid_request.go`
 - [go fmt your code](https://blog.golang.org/go-fmt-your-code)
 - [EditorConfig](https://editorconfig.org/) (not required, but useful)
+
+## Acknowledgments
+This library was originally developed by @mxmCherry under The Unlicense license, still available at https://github.com/mxmCherry/openrtb but no longer maintained. Prebid.org's efforts to continue development are offered under the Apache 2.0 license.
