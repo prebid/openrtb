@@ -3,7 +3,7 @@ package openrtb2
 import (
 	"encoding/json"
 
-	"github.com/mxmCherry/openrtb/v17/adcom1"
+	"github.com/prebid/openrtb/v1/adcom1"
 )
 
 // 3.2.13 Object: Site
