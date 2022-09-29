@@ -6,7 +6,7 @@ import "encoding/json"
 //
 // This object is composed of a set of nodes where each node represents a specific entity that participates in the transacting of inventory.
 // The entire chain of nodes from beginning to end represents all entities who are involved in the direct flow of payment for inventory.
-// Detailed implementation examples can be found here: https://github.com/InteractiveAdvertisingBureau/openrtb/blob/master/supplychainobject.md.
+// Detailed implementation examples can be found here: https://github.com/InteractiveAdvertisingBureau/openrtb/blob/main/supplychainobject.md.
 type SupplyChain struct {
 
 	// Attribute:

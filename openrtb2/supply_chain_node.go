@@ -6,7 +6,7 @@ import "encoding/json"
 //
 // This object is associated with a SupplyChain object as an array of nodes.
 // These nodes define the identity of an entity participating in the supply chain of a bid request.
-// Detailed implementation examples can be found here: https://github.com/InteractiveAdvertisingBureau/openrtb/blob/master/supplychainobject.md.
+// Detailed implementation examples can be found here: https://github.com/InteractiveAdvertisingBureau/openrtb/blob/main/supplychainobject.md.
 type SupplyChainNode struct {
 
 	// Attribute:

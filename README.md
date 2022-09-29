@@ -33,7 +33,7 @@ import (
 ```
 
 This repo follows [semver](http://semver.org/) - see [releases](https://github.com/mxmCherry/openrtb/releases).
-Master always contains latest code, so better use some package manager to vendor specific version.
+The `main` branch always contains latest code, so better use some package manager to vendor specific version.
 
 # Guidelines
 
