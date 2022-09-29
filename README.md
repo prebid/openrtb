@@ -9,7 +9,7 @@
 
 **Requires Go 1.13+**
 
-This library is switched to [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) as of [v14.0.0](https://github.com/prebid/openrtb/releases/tag/v14.0.0), so it requires Go [1.11](https://golang.org/doc/go1.11)+ (older Go versions are not capable of using versioned paths).
+This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)), so it requires Go [1.11](https://golang.org/doc/go1.11)+ since older Go versions are not capable of using versioned paths.
 
 Also, [test/matcher library](https://github.com/onsi/gomega) relies on newer Go [error handling approach](https://blog.golang.org/go1.13-errors), so tests require Go [1.13](https://golang.org/doc/go1.13)+.
 
@@ -77,4 +77,4 @@ Using both pointer and `omitempty` is mostly just to save traffic / generate mor
 - [EditorConfig](https://editorconfig.org/) (not required, but useful)
 
 ## Acknowledgments
-This library was originally developed by @mxmCherry under The Unlicense license, still available at https://github.com/mxmCherry/openrtb but no longer maintained. Prebid.org's efforts to continue development are offered under the Apache 2.0 license.
+This library was originally developed by [mxmCherry](https://github.com/mxmCherry) under The Unlicense license, still available at https://github.com/mxmCherry/openrtb but no longer maintained. Prebid.org's efforts to continue development are offered under the Apache 2.0 license.
