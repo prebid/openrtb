@@ -3,7 +3,7 @@ package response
 import (
 	"encoding/json"
 
-	"github.com/prebid/openrtb/v1/native1"
+	"github.com/prebid/openrtb/v17/native1"
 )
 
 // 5.5 Object: Data
