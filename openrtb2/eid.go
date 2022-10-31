@@ -8,6 +8,14 @@ import "encoding/json"
 // This object can contain one or more UIDs from a single source or a technology provider.
 // The exchange should ensure that business agreements allow for the sending of this data.
 type EID struct {
+	
+	// Attribute:
+	//   id
+	// Type:
+	//   string
+	// Description:
+	//   The identifier for EID.
+	ID string `json:"id,omitempty"`
 
 	// Attribute:
 	//   source
