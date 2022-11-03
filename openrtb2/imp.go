@@ -120,7 +120,9 @@ type Imp struct {
 	// Type:
 	//   float; default 0
 	// Description:
-	//   Minimum bid for this impression expressed in CPM.
+	//   Minimum bid for this impression expressed in CPM. When specified,
+	//   supersedes the bidfloor that is specificed in the parent impression
+	//   object.
 	BidFloor float64 `json:"bidfloor,omitempty"`
 
 	// Attribute:
@@ -198,6 +200,17 @@ type Imp struct {
 	//   Advisory as to the number of seconds that may elapse
 	//   between the auction and the actual impression.
 	Exp int64 `json:"exp,omitempty"`
+
+	// Attribute:
+	//   etime
+	// Type:
+	//   integer
+	// Description:
+	//   The minimum exposure time, in seconds per view, that the (uninterrupted)
+	//   player will display the creative before refreshing to the next creative.
+	//   If the field is absent, the exposure time is unknown. If 0, the exposure
+	//   time is indefinite.
+	ETime *int64 `json:"etime,omitempty"`
 
 	// Attribute:
 	//   ext
