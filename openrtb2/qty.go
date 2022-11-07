@@ -26,7 +26,7 @@ type Qty struct {
 	// Description:
 	//   The source type of the quantity measurement, ie. publisher. Refer to
 	//   List: DOOH Multiplier Measurement Source Types.
-	SourceType adcom1.MultiplierMeasurementSourceType `json:"sourcetype,omitempty"`
+	SourceType adcom1.DOOHMultiplierMeasurementSourceType `json:"sourcetype,omitempty"`
 
 	// Attribute:
 	//   vendor
