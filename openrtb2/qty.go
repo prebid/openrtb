@@ -19,7 +19,7 @@ type Qty struct {
 	//   considered to be 14.2 impressions. Equivalent to qtyflt in OpenRTB 3.0.
 	Multiplier float64 `json:"multiplier,omitempty"`
 
-	// Attribute:
+	// Attribute:x
 	//   sourcetype
 	// Type:
 	//   integer; recommended

@@ -202,17 +202,6 @@ type Imp struct {
 	Exp int64 `json:"exp,omitempty"`
 
 	// Attribute:
-	//   etime
-	// Type:
-	//   integer
-	// Description:
-	//   The minimum exposure time, in seconds per view, that the (uninterrupted)
-	//   player will display the creative before refreshing to the next creative.
-	//   If the field is absent, the exposure time is unknown. If 0, the exposure
-	//   time is indefinite.
-	ETime *int64 `json:"etime,omitempty"`
-
-	// Attribute:
 	//   qty
 	// Type:
 	//   object

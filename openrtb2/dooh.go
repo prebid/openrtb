@@ -26,7 +26,7 @@ type DOOH struct {
 	// Type:
 	//   string
 	// Description:
-	//   App name (may be aliased at the publisher’s request).
+	//   Name of the DOOH placement.
 	Name string `json:"name,omitempty"`
 
 	// Attribute:
@@ -60,7 +60,7 @@ type DOOH struct {
 	// Type:
 	//   string
 	// Description:
-	//   Domain of the inventory (ads.txt) owner (e.g., “mysite.foo.com”)
+	//   Domain of the inventory owner (e.g., “mysite.foo.com”)
 	Domain string `json:"domain,omitempty"`
 
 	// Attribute:
