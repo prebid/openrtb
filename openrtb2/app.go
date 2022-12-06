@@ -9,7 +9,7 @@ import (
 // Object: App
 //
 // This object should be included if the ad supported content is a non-browser application (typically in mobile) as opposed to a website.
-// A request must not contain more than one of a Site, App or DOOH object.
+// A bid request with an app object must not contain a site or DOOH object.
 // At a minimum, it is useful to provide an App ID or bundle, but this is not strictly required.
 type App struct {
 
