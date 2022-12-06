@@ -1,6 +1,7 @@
 package adcom1
 
 // DOOHVenueType represents the digital out-of-home venue types and is derived from DPAA Programmatic Standards.
+// This enumeration is deprecated.
 type DOOHVenueType int
 
 // Digital out-of-home venue types.

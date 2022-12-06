@@ -6,10 +6,10 @@ import (
 	"github.com/prebid/openrtb/v17/adcom1"
 )
 
-// 3.2.13 Object: Site
+// Object: Site
 //
-// This object should be included if the ad supported content is a website as opposed to a non-browser application.
-// A bid request must not contain both a Site and an App object.
+// This object should be included if the ad supported content is a website as opposed to a non-browser application or Digital Out of Home (DOOH) inventory. .
+// A bid request must not contain more than one of a `Site`, `App` or `DOOH` object.
 // At a minimum, it is useful to provide a site ID or page URL, but this is not strictly required.
 type Site struct {
 
@@ -150,6 +150,22 @@ type Site struct {
 	//   Array of keywords about the site. Only one of ‘keywords’ or
 	//   ‘kwarray’ may be present.
 	KwArray []string `json:"kwarray,omitempty"`
+
+	// Attribute:
+	//   inventorypartnerdomain
+	// Type:
+	//   string
+	// Description:
+	//   A domain to be used for inventory authorization in the case of inventory
+	//   sharing arrangements between a site owner and content owner. This field
+	//   is typically used by authorization crawlers to establish the domain of
+	//   the content owner, who has the right to monetize some portion of ad
+	//   inventory within the site. The content owner's domain should be listed
+	//   in the site owner's ads.txt file as an inventorypartnerdomain. Authorization
+	//   for supply from the inventorypartnerdomain will be published in the ads.txt
+	//   file on the root of that domain. Refer to the ads.txt 1.1 spec for more
+	//   details.
+	InventoryPartnerDomain string `json:"inventorypartnerdomain,omitempty"`
 
 	// Attribute:
 	//   ext
