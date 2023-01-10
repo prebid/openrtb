@@ -99,7 +99,7 @@ type Audio struct {
 	//   within a bid request share the same podid, this indicates that
 	//   those impression opportunities belong to the same audio ad
 	//   pod.
-	PodID int64 `json:"podid,omitempty"`
+	PodID string `json:"podid,omitempty"`
 
 	// Attribute:
 	//   podid
