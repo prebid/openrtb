@@ -2,10 +2,10 @@ package openrtb2
 
 import "encoding/json"
 
-// 3.2.3 Object: Regs
+// Object: Regs
 //
 // This object contains any legal, governmental, or industry regulations that the sender deems applicable to the request.
-// See Section 7.5 for more details on the flags supporting Coppa, GDPR and CCPA.
+// See Section 7.5 for more details on the flags supporting Coppa, GDPR and others.
 type Regs struct {
 
 	// Attribute:
@@ -37,6 +37,27 @@ type Regs struct {
 	//   privacy regulation. See US Privacy String specifications. Refer
 	//   to Section 7.5 for more information.
 	USPrivacy string `json:"us_privacy,omitempty"`
+
+	// Attribute:
+	//   gpp
+	// Type:
+	//   string
+	// Description:
+	//   Contains the Global Privacy Platform’s consent string. See the
+	//   Global Privacy Platform specification for more details.
+	GPP string `json:"gpp,omitempty"`
+
+	// Attribute:
+	//   gpp_sid
+	// Type:
+	//   integer array
+	// Description:
+	//   Array of the section(s) of the string which should be applied for this
+	//   transaction. Generally will contain one and only one value, but there
+	//   are edge cases where more than one may apply. GPP Section 3 (Header)
+	//   and 4 (Signal Integrity) do not need to be included. See the
+	//   GPP Section Information for more details.
+	GPPSID []int8 `json:"gpp_sid,omitempty"`
 
 	// Attribute:
 	//   ext

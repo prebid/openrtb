@@ -200,6 +200,25 @@ type Imp struct {
 	Exp int64 `json:"exp,omitempty"`
 
 	// Attribute:
+	//   qty
+	// Type:
+	//   object
+	// Description:
+	//   A means of passing a multiplier in the bid request, representing the total
+	//   quantity of impressions for adverts that display to more than one person.
+	Qty *Qty `json:"qty,omitempty"`
+
+	// Attribute:
+	//   dt
+	// Type:
+	//   float
+	// Description:
+	//   Timestamp when the item is estimated to be fulfilled (e.g. when a DOOH
+	//   impression will be displayed) in Unix format (i.e., milliseconds since
+	//   the epoch).
+	DT float64 `json:"dt,omitempty"`
+
+	// Attribute:
 	//   ext
 	// Type:
 	//   object

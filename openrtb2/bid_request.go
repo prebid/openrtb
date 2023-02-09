@@ -54,6 +54,16 @@ type BidRequest struct {
 	App *App `json:"app,omitempty"`
 
 	// Attribute:
+	//   dooh
+	// Type:
+	//   object
+	// Description:
+	//   This object should be included if the ad supported content is a
+	//   Digital Out-Of-Home screen. A bid request with a DOOH object must
+	//   not contain a site or app object.
+	DOOH *DOOH `json:"dooh,omitempty"`
+
+	// Attribute:
 	//   device
 	// Type:
 	//   object; recommended

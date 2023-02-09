@@ -6,10 +6,10 @@ import (
 	"github.com/prebid/openrtb/v17/adcom1"
 )
 
-// 3.2.14 Object: App
+// Object: App
 //
 // This object should be included if the ad supported content is a non-browser application (typically in mobile) as opposed to a website.
-// A bid request must not contain both an App and a Site object.
+// A bid request with an app object must not contain a site or DOOH object.
 // At a minimum, it is useful to provide an App ID or bundle, but this is not strictly required.
 type App struct {
 
@@ -154,6 +154,21 @@ type App struct {
 	//   Array of keywords about the site. Only one of ‘keywords’ or
 	//   ‘kwarray’ may be present.
 	KwArray []string `json:"kwarray,omitempty"`
+
+	// Attribute:
+	//   inventorypartnerdomain
+	// Type:
+	//   string
+	// Description:
+	//   A domain to be used for inventory authorization in the case of inventory
+	//   sharing arrangements between an app owner and content owner. This field
+	//   is typically used by authorization crawlers to establish the domain of the
+	//   content owner, who has the right to monetize some portion of ad inventory
+	//   within the app. The content owner's domain should be listed in the app
+	//   owner's app-ads.txt file as an inventorypartnerdomain. Authorization for
+	//   supply from the inventorypartnerdomain will be published in the ads.txt
+	//   file on the root of that domain. Refer to the ads.txt 1.1 spec for more details.
+	InventoryPartnerDomain string `json:"inventorypartnerdomain,omitempty"`
 
 	// Attribute:
 	//   ext
