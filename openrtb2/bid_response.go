@@ -3,7 +3,7 @@ package openrtb2
 import (
 	"encoding/json"
 
-	"github.com/prebid/openrtb/v17/openrtb3"
+	"github.com/prebid/openrtb/v18/openrtb3"
 )
 
 // 4.3.1 Object: BidResponse

@@ -1,6 +1,6 @@
 package openrtb2
 
-import "github.com/prebid/openrtb/v17/adcom1"
+import "github.com/prebid/openrtb/v18/adcom1"
 
 // Object: Qty
 //
