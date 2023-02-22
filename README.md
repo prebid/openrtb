@@ -7,11 +7,9 @@
 - [adcom1](adcom1/) - [AdCOM](https://iabtechlab.com/standards/openmedia/) [1.0](https://github.com/InteractiveAdvertisingBureau/AdCOM) (can lag behind because official spec is constantly updated without version bump, feel free to PR)
 - [native1](native1/) - [OpenRTB Dynamic Native Ads API](https://iabtechlab.com/standards/openrtb-native/) [1.2](https://iabtechlab.com/wp-content/uploads/2016/07/OpenRTB-Native-Ads-Specification-Final-1.2.pdf)
 
-**Requires Go 1.13+**
+**Requires Go 1.16+**
 
-This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)), so it requires Go [1.11](https://golang.org/doc/go1.11)+ since older Go versions are not capable of using versioned paths.
-
-Also, [test/matcher library](https://github.com/onsi/gomega) relies on newer Go [error handling approach](https://blog.golang.org/go1.13-errors), so tests require Go [1.13](https://golang.org/doc/go1.13)+.
+This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) and requires Go [1.16](https://golang.org/doc/go1.16)+ to enable the ability to issue release retractions.
 
 # Using
 
