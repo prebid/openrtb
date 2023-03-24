@@ -1,4 +1,4 @@
-module github.com/prebid/openrtb/v18
+module github.com/prebid/openrtb/v19
 
 go 1.16
 

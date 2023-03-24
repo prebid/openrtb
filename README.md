@@ -1,4 +1,4 @@
-# openrtb [![Go Reference](https://pkg.go.dev/badge/github.com/prebid/openrtb/v18.svg)](https://pkg.go.dev/github.com/prebid/openrtb/v18) [![Test](https://github.com/prebid/openrtb/actions/workflows/test.yml/badge.svg)](https://github.com/prebid/openrtb/actions/workflows/test.yml)
+# openrtb [![Go Reference](https://pkg.go.dev/badge/github.com/prebid/openrtb/v19.svg)](https://pkg.go.dev/github.com/prebid/openrtb/v19) [![Test](https://github.com/prebid/openrtb/actions/workflows/test.yml/badge.svg)](https://github.com/prebid/openrtb/actions/workflows/test.yml)
 
 [OpenRTB](https://iabtechlab.com/standards/openrtb/), [AdCOM](https://iabtechlab.com/standards/openmedia) and [OpenRTB Dynamic Native Ads](https://iabtechlab.com/standards/openrtb-native/) types for [Go programming language](https://golang.org/)
 
@@ -14,19 +14,19 @@ This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog
 # Using
 
 ```bash
-go get -u "github.com/prebid/openrtb/v18/..."
+go get -u "github.com/prebid/openrtb/v19/..."
 ```
 
 ```go
 import (
-	openrtb2 "github.com/prebid/openrtb/v18/openrtb2"
+	openrtb2 "github.com/prebid/openrtb/v19/openrtb2"
 
-	openrtb3 "github.com/prebid/openrtb/v18/openrtb3"
-	adcom1 "github.com/prebid/openrtb/v18/adcom1"
+	openrtb3 "github.com/prebid/openrtb/v19/openrtb3"
+	adcom1 "github.com/prebid/openrtb/v19/adcom1"
 
-	native1 "github.com/prebid/openrtb/v18/native1"
-	nreq "github.com/prebid/openrtb/v18/native1/request"
-	nres "github.com/prebid/openrtb/v18/native1/response"
+	native1 "github.com/prebid/openrtb/v19/native1"
+	nreq "github.com/prebid/openrtb/v19/native1/request"
+	nres "github.com/prebid/openrtb/v19/native1/response"
 )
 ```
 
@@ -63,7 +63,7 @@ Pointer | Omitempty | When to use                                               
 
 Using both pointer and `omitempty` is mostly just to save traffic / generate more "canonical" (strict) JSON.
 
-## Documentation ([pkg.go.dev](https://pkg.go.dev/github.com/prebid/openrtb/v18))
+## Documentation ([pkg.go.dev](https://pkg.go.dev/github.com/prebid/openrtb/v19))
 - [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
 - Each entity (type, struct key or constant) should be documented
 - Ideally, copy-paste descriptions as-is, but feel free to omit section numbers, so just `<GoTypeName> defines <copy-pasted description from spec>`
