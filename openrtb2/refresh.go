@@ -10,7 +10,7 @@ import "encoding/json"
 // This field does not account for viewability or external factors such as a user leaving a page.
 type Refresh struct {
 	// Attribute:
-	//   count
+	//   settings
 	// Type:
 	//   object array; recommended
 	// Description:

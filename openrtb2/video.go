@@ -167,7 +167,7 @@ type Video struct {
 	Placement adcom1.VideoPlacementSubtype `json:"placement,omitempty"`
 
 	// Attribute:
-	//   placement
+	//   plcmnt
 	// Type:
 	//   integer
 	// Description:

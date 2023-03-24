@@ -20,7 +20,7 @@ type RefreshSettings struct {
 	RefType adcom1.AutoRefreshTrigger `json:"ref_type,omitempty"`
 
 	// Attribute:
-	//   count
+	//   min_int
 	// Type:
 	//   integer; recommended
 	// Description:
