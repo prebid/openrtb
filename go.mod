@@ -1,6 +1,6 @@
 module github.com/prebid/openrtb/v19
 
-go 1.18
+go 1.16
 
 require (
 	github.com/onsi/ginkgo v1.16.1
