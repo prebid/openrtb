@@ -167,12 +167,12 @@ type Video struct {
 	Placement adcom1.VideoPlacementSubtype `json:"placement,omitempty"`
 
 	// Attribute:
-	//   plcmnt
+	//   plcmt
 	// Type:
 	//   integer
 	// Description:
-	//   Video placement type for the impression. Refer to List: Plcmnt Subtypes - Video in AdCOM 1.0.
-	Plcmnt adcom1.VideoPlcmntSubtype `json:"plcmnt,omitempty"`
+	//   Video placement type for the impression. Refer to List: Plcmt Subtypes - Video in AdCOM 1.0.
+	Plcmt adcom1.VideoPlcmtSubtype `json:"plcmt,omitempty"`
 
 	// Attribute:
 	//   linearity
