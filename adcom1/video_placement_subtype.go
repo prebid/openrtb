@@ -2,7 +2,8 @@ package adcom1
 
 // VideoPlacementSubtype represents types of video placements derived largely from the IAB Digital Video Guidelines.
 // To be sent using the placement attribute in the Video object.
-// Proposed depreciation of this list and associated attribute in 2024.
+// DEPRECATED AS OF OPENRTB 2.6-202303.
+// Proposed removal of this list and associated attribute in 2024.
 type VideoPlacementSubtype int8
 
 // Types of video placements derived largely from the IAB Digital Video Guidelines.

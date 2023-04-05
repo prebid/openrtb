@@ -1,6 +1,6 @@
 package adcom1
 
-// AutoRefreshTrigger represents a list of triggers support by a placement or required by an ad.
+// AutoRefreshTrigger represents a list of triggers that result in an ad slot refreshing.
 type AutoRefreshTrigger int8
 
 // Triggers support by a placement or required by an ad.

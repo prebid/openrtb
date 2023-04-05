@@ -160,7 +160,7 @@ type Video struct {
 	// Attribute:
 	//   placement
 	// Type:
-	//   integer
+	//   integer; DEPRECATED
 	// Description:
 	//   Video placement type for the impression. Refer to List:
 	//   Placement Subtypes - Video in AdCOM 1.0.
