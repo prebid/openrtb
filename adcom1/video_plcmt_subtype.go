@@ -30,8 +30,8 @@ const (
 	// in-app video or slideshows.
 	VideoPlcmtInterstitial VideoPlcmtSubtype = 3
 
-	// VideoPlcmtNoContext represents no context / standalone video ads that are played
+	// VideoPlcmtNoContext represents no content / standalone video ads that are played
 	// without streaming video content. This can be in placements like slideshows, native
 	// feeds, in-content or sticky/floating.
-	VideoPlcmtNoContext VideoPlcmtSubtype = 4
+	VideoPlcmtNoContent VideoPlcmtSubtype = 4
 )
