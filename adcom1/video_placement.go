@@ -12,7 +12,7 @@ type VideoPlacement struct {
 	//   integer
 	// Definition:
 	//   Placement subtype.
-	//   Refer to List: Placement Subtypes - Video.
+	//   Refer to List: Plcmt Subtypes - Video.
 	PType VideoPlacementSubtype `json:"ptype,omitempty"`
 
 	// Attribute:

@@ -3,7 +3,7 @@ package openrtb2
 import (
 	"encoding/json"
 
-	"github.com/prebid/openrtb/v18/adcom1"
+	"github.com/prebid/openrtb/v19/adcom1"
 )
 
 // 3.2.7 Object: Video
@@ -160,11 +160,19 @@ type Video struct {
 	// Attribute:
 	//   placement
 	// Type:
-	//   integer
+	//   integer; DEPRECATED
 	// Description:
 	//   Video placement type for the impression. Refer to List:
 	//   Placement Subtypes - Video in AdCOM 1.0.
 	Placement adcom1.VideoPlacementSubtype `json:"placement,omitempty"`
+
+	// Attribute:
+	//   plcmt
+	// Type:
+	//   integer
+	// Description:
+	//   Video placement type for the impression. Refer to List: Plcmt Subtypes - Video in AdCOM 1.0.
+	Plcmt adcom1.VideoPlcmtSubtype `json:"plcmt,omitempty"`
 
 	// Attribute:
 	//   linearity

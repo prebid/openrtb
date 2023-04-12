@@ -1,8 +1,6 @@
-module github.com/prebid/openrtb/v18
+module github.com/prebid/openrtb/v19
 
 go 1.16
-
-retract v18.0.0 // Published with the wrong module version.
 
 require (
 	github.com/onsi/ginkgo v1.16.1

@@ -1,6 +1,10 @@
 package openrtb2
 
-import "github.com/prebid/openrtb/v18/adcom1"
+import (
+	"encoding/json"
+
+	"github.com/prebid/openrtb/v19/adcom1"
+)
 
 // Object: Qty
 //
@@ -36,4 +40,12 @@ type Qty struct {
 	//   The top level business domain name of the measurement vendor providing
 	//   the quantity measurement.
 	Vendor string `json:"vendor,omitempty"`
+
+	// Attribute:
+	//   ext
+	// Type:
+	//   object
+	// Definition:
+	//   Placeholder for vendor specific extensions to this object.
+	Ext json.RawMessage `json:"ext,omitempty"`
 }

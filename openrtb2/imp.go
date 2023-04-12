@@ -19,7 +19,7 @@ type Imp struct {
 	//   string; required
 	// Description:
 	//   A unique identifier for this impression within the context of
-	//   the bid request (typically, starts with 1 and increments.
+	//   the bid request (typically, starts with 1 and increments).
 	ID string `json:"id"`
 
 	// Attribute:
@@ -217,6 +217,14 @@ type Imp struct {
 	//   impression will be displayed) in Unix format (i.e., milliseconds since
 	//   the epoch).
 	DT float64 `json:"dt,omitempty"`
+
+	// Attribute:
+	//   refresh
+	// Type:
+	//   object
+	// Description:
+	//   Details about ad slots being refreshed automatically. (Section 3.2.33)
+	Refresh *Refresh `json:"refresh,omitempty"`
 
 	// Attribute:
 	//   ext
