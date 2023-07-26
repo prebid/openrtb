@@ -22,7 +22,7 @@ type Metric struct {
 	//   value
 	// Type:
 	//   float; required
-	// Dscription:
+	// Description:
 	//   Number representing the value of the metric. Probabilities
 	//   must be in the range 0.0 – 1.0.
 	Value float64 `json:"value,omitempty"`

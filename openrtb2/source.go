@@ -16,7 +16,7 @@ type Source struct {
 	// Description:
 	//   Entity responsible for the final impression sale decision, where
 	//   0 = exchange, 1 = upstream source.
-	FD int8 `json:"fd,omitempty"`
+	FD *int8 `json:"fd,omitempty"`
 
 	// Attribute:
 	//   tid

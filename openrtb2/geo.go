@@ -23,7 +23,7 @@ type Geo struct {
 	//   float
 	// Description:
 	//   Latitude from -90.0 to +90.0, where negative is south.
-	Lat float64 `json:"lat,omitempty"`
+	Lat *float64 `json:"lat,omitempty"`
 
 	// Attribute:
 	//   lon
@@ -31,7 +31,7 @@ type Geo struct {
 	//   float
 	// Description:
 	//   Longitude from -180.0 to +180.0, where negative is west.
-	Lon float64 `json:"lon,omitempty"`
+	Lon *float64 `json:"lon,omitempty"`
 
 	// Attribute:
 	//   type

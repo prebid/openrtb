@@ -107,7 +107,7 @@ type Site struct {
 	// Description:
 	//   Indicates if the site has been programmed to optimize layout
 	//   when viewed on mobile devices, where 0 = no, 1 = yes.
-	Mobile int8 `json:"mobile,omitempty"`
+	Mobile *int8 `json:"mobile,omitempty"`
 
 	// Attribute:
 	//   privacypolicy
@@ -115,7 +115,7 @@ type Site struct {
 	//   integer
 	// Description:
 	//   Indicates if the site has a privacy policy, where 0 = no, 1 = yes.
-	PrivacyPolicy int8 `json:"privacypolicy,omitempty"`
+	PrivacyPolicy *int8 `json:"privacypolicy,omitempty"`
 
 	// Attribute:
 	//   publisher

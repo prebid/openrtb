@@ -112,7 +112,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Width of the video player in device independent pixels (DIPS).
-	W int64 `json:"w,omitempty"`
+	W *int64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -120,7 +120,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Height of the video player in device independent pixels (DIPS).
-	H int64 `json:"h,omitempty"`
+	H *int64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   podid
@@ -276,7 +276,7 @@ type Video struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Minimum bit rate in Kbps.
+	//   Minimum bit rate in Kbps (kilobits per second).
 	MinBitRate int64 `json:"minbitrate,omitempty"`
 
 	// Attribute:
@@ -284,7 +284,7 @@ type Video struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Maximum bit rate in Kbps.
+	//   Maximum bit rate in Kbps (kilobits per second).
 	MaxBitRate int64 `json:"maxbitrate,omitempty"`
 
 	// Attribute:
@@ -294,7 +294,7 @@ type Video struct {
 	// Description:
 	//   Indicates if letter-boxing of 4:3 content into a 16:9 window is
 	//   allowed, where 0 = no, 1 = yes.
-	BoxingAllowed int8 `json:"boxingallowed,omitempty"`
+	BoxingAllowed *int8 `json:"boxingallowed,omitempty"`
 
 	// Attribute:
 	//   playbackmethod

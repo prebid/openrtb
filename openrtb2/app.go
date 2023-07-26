@@ -111,7 +111,7 @@ type App struct {
 	//   integer
 	// Description:
 	//   Indicates if the app has a privacy policy, where 0 = no, 1 = yes.
-	PrivacyPolicy int8 `json:"privacypolicy,omitempty"`
+	PrivacyPolicy *int8 `json:"privacypolicy,omitempty"`
 
 	// Attribute:
 	//   paid
@@ -119,7 +119,7 @@ type App struct {
 	//   integer
 	// Description:
 	//   0 = app is free, 1 = the app is a paid version.
-	Paid int8 `json:"paid,omitempty"`
+	Paid *int8 `json:"paid,omitempty"`
 
 	// Attribute:
 	//   publisher

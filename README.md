@@ -9,7 +9,7 @@
 
 **Requires Go 1.16+**
 
-This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) and requires Go [1.16](https://golang.org/doc/go1.16)+ to enable the ability to issue release retractions.
+This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) and requires Go [1.16](https://golang.org/doc/go1.16)+ for the ability to issue release retractions.
 
 # Using
 
@@ -51,15 +51,15 @@ The `main` branch always contains latest code, so better use some package manage
 	- all enums, described in section 5, must be typed with section name singularized (e.g., "5.2 Banner Ad Types" -> `type BannerAdType int8`)
 	- all typed enums must have constants for each element, prefixed with type name (e.g., "5.2 Banner Ad Types - XHTML Text Ad (usually mobile)" -> `const BannerAdTypeXHTMLTextAd BannerAdType = 1`)
 	- never use `iota` for enum constants
-	- OpenRTB (2.x) section "5.1 Content Categories" should remain untyped and have no constants
+	- OpenRTB (2.x) "content categories" should remain untyped and have no constants
 
 ## Pointers/omitempty
 Pointer | Omitempty | When to use                                                          | Example
 ------- | --------- | -------------------------------------------------------------------- | ---------------------------------
- no     | no        | _required_ in spec                                                   | `Audio.mimes`
- yes    | yes       | _required_ in spec, but is a part of mutually-exclusive group        | `Imp.{banner,video,audio,native}`
- no     | yes       | zero value (`""`, `0`) is useless / has no meaning                   | `Device.ua`
- yes    | yes       | zero value (`""`, `0`) or value absence (`null`) has special meaning | `Device.{dnt,lmt}`
+ no     | no        | _required_ in spec                                                   | `Audio.MIMEs`
+ yes    | yes       | _required_ in spec, but is a part of mutually-exclusive group        | `Imp.{Banner,Video,Audio,Native}`
+ no     | yes       | zero value (`""`, `0`) has no meaning, is defined in the spec as the default value, or represents time / duration                    | `Device.UA`
+ yes    | yes       | zero value (`""`, `0`) or value absence (`null`) has special meaning | `Device.{DNT,Lmt}`
 
 Using both pointer and `omitempty` is mostly just to save traffic / generate more "canonical" (strict) JSON.
 
