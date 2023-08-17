@@ -19,7 +19,7 @@ type Refresh struct {
 	//   integer; recommended
 	// Description:
 	//   The number of times this ad slot had been refreshed since last page load.
-	Count int `json:"count,omitempty"`
+	Count *int `json:"count,omitempty"`
 
 	// Attribute:
 	//   ext

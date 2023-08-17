@@ -3,7 +3,7 @@ package openrtb2
 import (
 	"encoding/json"
 
-	"github.com/prebid/openrtb/v19/adcom1"
+	"github.com/prebid/openrtb/v20/adcom1"
 )
 
 // 3.2.16 Object: Content
@@ -205,7 +205,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   0 = not live, 1 = content is live (e.g., stream, live blog).
-	LiveStream int8 `json:"livestream,omitempty"`
+	LiveStream *int8 `json:"livestream,omitempty"`
 
 	// Attribute:
 	//   sourcerelationship
@@ -213,7 +213,7 @@ type Content struct {
 	//   integer
 	// Description:
 	//   0 = indirect, 1 = direct.
-	SourceRelationship int8 `json:"sourcerelationship,omitempty"`
+	SourceRelationship *int8 `json:"sourcerelationship,omitempty"`
 
 	// Attribute:
 	//   len
@@ -248,7 +248,7 @@ type Content struct {
 	// Description:
 	//   Indicator of whether or not the content is embeddable (e.g.,
 	//   an embeddable video player), where 0 = no, 1 = yes.
-	Embeddable int8 `json:"embeddable,omitempty"`
+	Embeddable *int8 `json:"embeddable,omitempty"`
 
 	// Attribute:
 	//   data

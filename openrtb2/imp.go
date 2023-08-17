@@ -142,7 +142,7 @@ type Imp struct {
 	//   creative in an app, where 0 = embedded, 1 = native. Note that
 	//   the Safari View Controller in iOS 9.x devices is considered a
 	//   native browser for purposes of this attribute.
-	ClickBrowser int8 `json:"clickbrowser,omitempty"`
+	ClickBrowser *int8 `json:"clickbrowser,omitempty"`
 
 	// Attribute:
 	//   secure

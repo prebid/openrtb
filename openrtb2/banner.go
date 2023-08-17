@@ -3,7 +3,7 @@ package openrtb2
 import (
 	"encoding/json"
 
-	"github.com/prebid/openrtb/v19/adcom1"
+	"github.com/prebid/openrtb/v20/adcom1"
 )
 
 // 3.2.6 Object: Banner
@@ -170,7 +170,7 @@ type Banner struct {
 	//   (Section 3.2.7) in an array of companion ads. Indicates the
 	//   companion banner rendering mode relative to the associated
 	//   video, where 0 = concurrent, 1 = end-card.
-	VCm int8 `json:"vcm,omitempty"`
+	Vcm *int8 `json:"vcm,omitempty"`
 
 	// Attribute:
 	//   ext

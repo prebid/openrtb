@@ -1,4 +1,4 @@
-# openrtb [![Go Reference](https://pkg.go.dev/badge/github.com/prebid/openrtb/v19.svg)](https://pkg.go.dev/github.com/prebid/openrtb/v19) [![Test](https://github.com/prebid/openrtb/actions/workflows/test.yml/badge.svg)](https://github.com/prebid/openrtb/actions/workflows/test.yml)
+# openrtb [![Go Reference](https://pkg.go.dev/badge/github.com/prebid/openrtb/v20.svg)](https://pkg.go.dev/github.com/prebid/openrtb/v20) [![Test](https://github.com/prebid/openrtb/actions/workflows/test.yml/badge.svg)](https://github.com/prebid/openrtb/actions/workflows/test.yml)
 
 [OpenRTB](https://iabtechlab.com/standards/openrtb/), [AdCOM](https://iabtechlab.com/standards/openmedia) and [OpenRTB Dynamic Native Ads](https://iabtechlab.com/standards/openrtb-native/) types for [Go programming language](https://golang.org/)
 
@@ -9,24 +9,24 @@
 
 **Requires Go 1.16+**
 
-This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) and requires Go [1.16](https://golang.org/doc/go1.16)+ to enable the ability to issue release retractions.
+This library uses [Go modules](https://golang.org/ref/mod) ([tl;dr](https://blog.golang.org/using-go-modules)) and requires Go [1.16](https://golang.org/doc/go1.16)+ for the ability to issue release retractions.
 
 # Using
 
 ```bash
-go get -u "github.com/prebid/openrtb/v19/..."
+go get -u "github.com/prebid/openrtb/v20/..."
 ```
 
 ```go
 import (
-	openrtb2 "github.com/prebid/openrtb/v19/openrtb2"
+	openrtb2 "github.com/prebid/openrtb/v20/openrtb2"
 
-	openrtb3 "github.com/prebid/openrtb/v19/openrtb3"
-	adcom1 "github.com/prebid/openrtb/v19/adcom1"
+	openrtb3 "github.com/prebid/openrtb/v20/openrtb3"
+	adcom1 "github.com/prebid/openrtb/v20/adcom1"
 
-	native1 "github.com/prebid/openrtb/v19/native1"
-	nreq "github.com/prebid/openrtb/v19/native1/request"
-	nres "github.com/prebid/openrtb/v19/native1/response"
+	native1 "github.com/prebid/openrtb/v20/native1"
+	nreq "github.com/prebid/openrtb/v20/native1/request"
+	nres "github.com/prebid/openrtb/v20/native1/response"
 )
 ```
 
@@ -51,19 +51,19 @@ The `main` branch always contains latest code, so better use some package manage
 	- all enums, described in section 5, must be typed with section name singularized (e.g., "5.2 Banner Ad Types" -> `type BannerAdType int8`)
 	- all typed enums must have constants for each element, prefixed with type name (e.g., "5.2 Banner Ad Types - XHTML Text Ad (usually mobile)" -> `const BannerAdTypeXHTMLTextAd BannerAdType = 1`)
 	- never use `iota` for enum constants
-	- OpenRTB (2.x) section "5.1 Content Categories" should remain untyped and have no constants
+	- OpenRTB (2.x) "content categories" should remain untyped and have no constants
 
 ## Pointers/omitempty
 Pointer | Omitempty | When to use                                                          | Example
 ------- | --------- | -------------------------------------------------------------------- | ---------------------------------
- no     | no        | _required_ in spec                                                   | `Audio.mimes`
- yes    | yes       | _required_ in spec, but is a part of mutually-exclusive group        | `Imp.{banner,video,audio,native}`
- no     | yes       | zero value (`""`, `0`) is useless / has no meaning                   | `Device.ua`
- yes    | yes       | zero value (`""`, `0`) or value absence (`null`) has special meaning | `Device.{dnt,lmt}`
+ no     | no        | _required_ in spec                                                   | `Audio.MIMEs`
+ yes    | yes       | _required_ in spec, but is a part of mutually-exclusive group        | `Imp.{Banner,Video,Audio,Native}`
+ no     | yes       | zero value (`""`, `0`) has no meaning, is defined in the spec as the default value, or represents time / duration                    | `Device.UA`
+ yes    | yes       | zero value (`""`, `0`) or value absence (`null`) has special meaning | `Device.{DNT,Lmt}`
 
 Using both pointer and `omitempty` is mostly just to save traffic / generate more "canonical" (strict) JSON.
 
-## Documentation ([pkg.go.dev](https://pkg.go.dev/github.com/prebid/openrtb/v19))
+## Documentation ([pkg.go.dev](https://pkg.go.dev/github.com/prebid/openrtb/v20))
 - [Godoc: documenting Go code](http://blog.golang.org/godoc-documenting-go-code)
 - Each entity (type, struct key or constant) should be documented
 - Ideally, copy-paste descriptions as-is, but feel free to omit section numbers, so just `<GoTypeName> defines <copy-pasted description from spec>`
