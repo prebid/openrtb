@@ -11,6 +11,7 @@ import (
 // There are no explicit constraints on the defined ranges, nor guarantees that they don't overlap.
 // In cases where multiple ranges may apply, it is up to the buyer and seller to coordinate on which floor is applicable.
 type DurFloors struct {
+
 	// Attribute:
 	//   mindur
 	// Type:
