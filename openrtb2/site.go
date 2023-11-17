@@ -40,7 +40,7 @@ type Site struct {
 	// Attribute:
 	//   cattax
 	// Type:
-	//   integer
+	//   integer; default 1
 	// Description:
 	//   The taxonomy in use. Refer to the AdCOM list List: Category
 	//   Taxonomies for values. If no cattax field is supplied IAB Content

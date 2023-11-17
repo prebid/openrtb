@@ -130,7 +130,8 @@ type Imp struct {
 	// Description:
 	//   Currency specified using ISO-4217 alpha codes. This may be
 	//   different from bid currency returned by bidder if this is
-	//   allowed by the exchange.
+	//   allowed by the exchange. This currency sets the default for
+	//   all floors specified in the Imp object.
 	BidFloorCur string `json:"bidfloorcur,omitempty"`
 
 	// Attribute:

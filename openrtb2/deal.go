@@ -32,7 +32,9 @@ type Deal struct {
 	// Description:
 	//   Currency specified using ISO-4217 alpha codes. This may be
 	//   different from bid currency returned by bidder if this is
-	//   allowed by the exchange.
+	//   allowed by the exchange. This field does not inherit from
+	//   imp.bidfloorcur; it is either explicitly specified or
+	//   defaults to USD.
 	BidFloorCur string `json:"bidfloorcur,omitempty"`
 
 	// Attribute:
@@ -66,6 +68,39 @@ type Deal struct {
 	//   bid on this deal. Omission implies no advertiser restrictions.
 	WADomain []string `json:"wadomain,omitempty"`
 
+	// Attribute:
+	//   guar
+	// Type:
+	//   integer, default 0
+	// Description:
+	//   Indicates that the deal is of type guaranteed and the bidder must
+	//   bid on the deal, where 0 = not a guaranteed deal, 1 = guaranteed deal.
+	Guar int8 `json:"guar,omitempty"` // convert to an enum?
+
+	// Attribute:
+	//   mincpmpersec
+	// Type:
+	//   float
+	// Definition:
+	//   Minimum CPM per second. This is a price floor for video or audio
+	//   impression opportunities, relative to the duration of bids an
+	//   advertiser may submit.
+	MinCPMPerSec float64 `json:"mincpmpersec,omitempty"`
+
+	// Attribute:
+	//   durfloors
+	// Type:
+	//   object array
+	// Description:
+	//   An array of DurFloors objects (Section 3.2.35) indicating the floor
+	//   prices for video creatives of various durations that the buyer may bid with.
+	DurFloors [] `json:"durfloors,omitempty"`
+
+	// Attribute:
+	//   wadomain
+	// Type:
+	//   string array
+	// Description:
 	// Attribute:
 	//   ext
 	// Type:
