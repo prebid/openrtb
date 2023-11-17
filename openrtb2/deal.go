@@ -94,7 +94,7 @@ type Deal struct {
 	// Description:
 	//   An array of DurFloors objects (Section 3.2.35) indicating the floor
 	//   prices for video creatives of various durations that the buyer may bid with.
-	DurFloors [] `json:"durfloors,omitempty"`
+	DurFloors []DurFloors `json:"durfloors,omitempty"`
 
 	// Attribute:
 	//   wadomain
