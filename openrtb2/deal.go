@@ -75,7 +75,7 @@ type Deal struct {
 	// Description:
 	//   Indicates that the deal is of type guaranteed and the bidder must
 	//   bid on the deal, where 0 = not a guaranteed deal, 1 = guaranteed deal.
-	Guar *int8 `json:"guar,omitempty"`
+	Guar int8 `json:"guar,omitempty"`
 
 	// Attribute:
 	//   mincpmpersec
