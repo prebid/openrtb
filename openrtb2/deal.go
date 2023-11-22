@@ -92,8 +92,9 @@ type Deal struct {
 	// Type:
 	//   object array
 	// Description:
-	//   An array of DurFloors objects (Section 3.2.35) indicating the floor
-	//   prices for video creatives of various durations that the buyer may bid with.
+	//   Container for floor price by duration information, to be used if a
+	//   given deal is eligible for video or audio demand. An array of DurFloors
+	//   objects (see Section 3.2.35).
 	DurFloors []DurFloors `json:"durfloors,omitempty"`
 
 	// Attribute:
