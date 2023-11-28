@@ -10,6 +10,7 @@ import (
 //
 // Information on how often and what triggers an ad slot being refreshed.
 type RefSettings struct {
+
 	// Attribute:
 	//   reftype
 	// Type:

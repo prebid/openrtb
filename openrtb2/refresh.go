@@ -4,6 +4,7 @@ import "encoding/json"
 
 // Object: Refresh
 type Refresh struct {
+
 	// Attribute:
 	//   refsettings
 	// Type:

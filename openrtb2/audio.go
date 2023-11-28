@@ -257,6 +257,15 @@ type Audio struct {
 	NVol *adcom1.VolumeNormalizationMode `json:"nvol,omitempty"`
 
 	// Attribute:
+	//   durfloors
+	// Type:
+	//   object array
+	// Description:
+	//   An array of DurFloors objects (Section 3.2.35) indicating the floor
+	//   prices for video creatives of various durations that the buyer may bid with.
+	DurFloors []DurFloors `json:"durfloors,omitempty"`
+
+	// Attribute:
 	//   ext
 	// Type:
 	//   object

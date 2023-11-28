@@ -8,7 +8,7 @@ import (
 
 // 3.2.1 Object: BidRequest
 //
-// The top-level bid request object contains a globally unique bid request or auction ID.
+// The top-level bid request object contains an exchange unique bid request or auction ID.
 // This id attribute is required as is at least one impression object (Section 3.2.4).
 // Other attributes in this top-level object establish rules and restrictions that apply to all impressions being offered.
 //
@@ -22,7 +22,9 @@ type BidRequest struct {
 	// Type:
 	//   string; required
 	// Description:
-	//   Unique ID of the bid request, provided by the exchange.
+	//   ID of the bid request, assigned by the exchange, and unique for the
+	//   exchange’s subsequent tracking of the responses. The exchange may use
+	//   different values for different recipients.
 	ID string `json:"id"`
 
 	// Attribute:
@@ -183,6 +185,17 @@ type BidRequest struct {
 	WLangB []string `json:"wlangb,omitempty"`
 
 	// Attribute:
+	//   acat
+	// Type:
+	//   string array
+	// Description:
+	//   Allowed advertiser categories using the specified category taxonomy.
+	//   The taxonomy to be used is defined by the cattax field. If no cattax
+	//   field is supplied IAB Content Taxonomy 1.0 is assumed. Only one of
+	//   acat or bcat should be present.
+	ACat []string `json:"acat,omitempty"`
+
+	// Attribute:
 	//   bcat
 	// Type:
 	//   string array
@@ -191,7 +204,7 @@ type BidRequest struct {
 	//   category taxonomy.
 	//   The taxonomy to be used is defined by the cattax field. If no
 	//   cattax field is supplied IAB Content Category Taxonomy 1.0 is
-	//   assumed.
+	//   assumed.  Only one of acat or bcat should be present.
 	BCat []string `json:"bcat,omitempty"`
 
 	// Attribute:
