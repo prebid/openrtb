@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 
 	"github.com/prebid/openrtb/v20/adcom1"
+	native1 "github.com/prebid/openrtb/v20/native1/request"
 )
 
 // 3.2.9 Object: Native
@@ -21,6 +22,15 @@ import (
 // At the publisher’s discretion, that same impression may also be offered as banner, video, and/or audio by also including as Imp subordinates objects of those types.
 // However, any given bid for the impression must conform to one of the offered types.
 type Native struct {
+
+	// Attribute:
+	//   request_native
+	// Type:
+	//   object; required
+	// Description:
+	// 		Native Struct for BidSwitch
+	//		https://protocol.bidswitch.com/ssp-protocol/ssp-native-request.html
+	RequestNative native1.Request `json:"request_native"`
 
 	// Attribute:
 	//   request

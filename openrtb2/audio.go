@@ -66,6 +66,9 @@ type Audio struct {
 	//   OpenRTB <=2.5 defined only protocols 1..10.
 	Protocols []adcom1.MediaCreativeSubtype `json:"protocols,omitempty"`
 
+	//+       //   Array of supported audio protocols. Refer to List 5.8.
+	//+       Protocols []Protocol `json:"protocols,omitempty"`  @todo(athenais): check how to impl that
+
 	// Attribute:
 	//   startdelay
 	// Type:

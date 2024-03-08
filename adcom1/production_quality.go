@@ -11,3 +11,16 @@ const (
 	ProductionProsumer     ProductionQuality = 2 // Prosumer
 	ProductionUser         ProductionQuality = 3 // User Generated (UGC)
 )
+
+// Ptr returns pointer to own value.
+func (q ProductionQuality) Ptr() *ProductionQuality {
+	return &q
+}
+
+// Val safely dereferences pointer, returning default value (ProductionQualityUnknown) for nil.
+func (q *ProductionQuality) Val() ProductionQuality {
+	if q == nil {
+		return ProductionUnknown
+	}
+	return *q
+}

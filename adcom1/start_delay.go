@@ -6,6 +6,8 @@ type StartDelay int64
 // Options for the video or audio start delay.
 // If the start delay value is greater than 0, then the position is mid-roll and the value indicates the start delay.
 const (
+	// > 0 Mid-Roll (value indicates start delay in second)
+
 	StartPreRoll  StartDelay = 0  // Pre-Roll
 	StartMidRoll  StartDelay = -1 // Generic Mid-Roll
 	StartPostRoll StartDelay = -2 // Generic Post-Roll
