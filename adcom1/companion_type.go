@@ -11,4 +11,3 @@ const (
 	CompanionHTML   CompanionType = 2 // HTML Resource
 	CompanionIFrame CompanionType = 3 // iframe Resource
 )
-Ï
