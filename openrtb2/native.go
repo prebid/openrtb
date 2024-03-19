@@ -30,7 +30,7 @@ type Native struct {
 	// Description:
 	// 		Native Struct for BidSwitch
 	//		https://protocol.bidswitch.com/ssp-protocol/ssp-native-request.html
-	RequestNative native1.Request `json:"request_native"`
+	RequestNative *native1.Request `json:"request_native"`
 
 	// Attribute:
 	//   requestobj
