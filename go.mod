@@ -1,4 +1,4 @@
-module github.com/openrtb-adagio
+module github.com/onfocusio/openrtb
 
 go 1.16
 
