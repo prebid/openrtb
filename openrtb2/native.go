@@ -33,6 +33,14 @@ type Native struct {
 	RequestNative native1.Request `json:"request_native"`
 
 	// Attribute:
+	//   requestobj
+	// Type:
+	//   object; required
+	// Description:
+	// 		Native Struct for Rubicon
+	RequestObj *native1.Request `json:"requestobj,omitempty"`
+
+	// Attribute:
 	//   request
 	// Type:
 	//   string; required
