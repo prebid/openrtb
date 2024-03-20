@@ -29,6 +29,17 @@ type Link struct {
 	ClickTrackers []string `json:"clicktrackers,omitempty"`
 
 	// Field:
+	//   clickTrackers
+	// Scope:
+	//   optional
+	// Type:
+	//   string array
+	// Description:
+	//   List of third-party tracker URLs to be fired on click of the URL.
+	// 	 Fallback because we has a typo in the Prebid Bid Adapter
+	FallbackClickTrackers []string `json:"clickTrackers,omitempty"`
+
+	// Field:
 	//   fallback
 	// Scope:
 	//   optional
