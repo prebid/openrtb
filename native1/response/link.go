@@ -16,7 +16,7 @@ type Link struct {
 	//   string
 	// Description:
 	//   Landing URL of the clickable link.
-	URL string `json:"url"`
+	URL string `json:"url,omitempty"`
 
 	// Field:
 	//   clicktrackers
