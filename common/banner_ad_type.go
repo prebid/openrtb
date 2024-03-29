@@ -1,4 +1,4 @@
-package openrtb2
+package common
 
 // BannerAdType
 //
