@@ -1,6 +1,6 @@
 package request
 
-import "github.com/prebid/openrtb/v20/common"
+import "github.com/onfocusio/openrtb-adagio/common"
 
 // 4.5 Video Object
 //

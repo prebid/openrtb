@@ -1,7 +1,7 @@
 package openrtb2
 
 import (
-	"github.com/prebid/openrtb/v20/common"
+	"github.com/onfocusio/openrtb-adagio/common"
 )
 
 // 3.2.6 Object: Banner
