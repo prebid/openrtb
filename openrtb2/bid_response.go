@@ -74,6 +74,14 @@ type BidResponse struct {
 	NBR *openrtb3.NoBidReason `json:"nbr,omitempty"`
 
 	// Attribute:
+	//   statuscode
+	// Type:
+	//   integer
+	// Description:F
+	//   StatusCode from Rubicon
+	StatusCode int `json:"statuscode"`
+
+	// Attribute:
 	//   ext
 	// Type:
 	//   object

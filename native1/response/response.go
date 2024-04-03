@@ -36,7 +36,7 @@ type Response struct {
 	//   1.2
 	// Description:
 	//   Version of the Native Markup version in use.
-	Ver string `json:"ver,omitempty"`
+	Ver interface{} `json:"ver,omitempty"`
 
 	// Field:
 	//   assets
@@ -86,7 +86,7 @@ type Response struct {
 	//   This is default link object for the ad.
 	//   Individual assets can also have a link object which applies if the asset is activated(clicked).
 	//   If the asset doesn’t have a link object, the parent link object applies.
-	Link Link `json:"link"`
+	Link Link `json:"link,omitempty"`
 
 	// Field:
 	//   imptrackers

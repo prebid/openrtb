@@ -25,12 +25,10 @@ type Asset struct {
 	// Scope:
 	//   optional
 	// Type:
-	//   int
-	// Default:
-	//   0
+	//   interface
 	// Description:
-	//   Set to 1 if asset is required. (bidder requires it to be displayed).
-	Required int8 `json:"required,omitempty"`
+	//   Updated from int to interface{} because some bidder set a boolean like `Rubicon`
+	Required interface{} `json:"required,omitempty"`
 
 	// Field:
 	//   title

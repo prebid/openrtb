@@ -16,7 +16,7 @@ type Link struct {
 	//   string
 	// Description:
 	//   Landing URL of the clickable link.
-	URL string `json:"url"`
+	URL string `json:"url,omitempty"`
 
 	// Field:
 	//   clicktrackers
@@ -27,6 +27,17 @@ type Link struct {
 	// Description:
 	//   List of third-party tracker URLs to be fired on click of the URL.
 	ClickTrackers []string `json:"clicktrackers,omitempty"`
+
+	// Field:
+	//   clickTrackers
+	// Scope:
+	//   optional
+	// Type:
+	//   string array
+	// Description:
+	//   List of third-party tracker URLs to be fired on click of the URL.
+	// 	 Fallback because we has a typo in the Prebid Bid Adapter
+	FallbackClickTrackers []string `json:"clickTrackers,omitempty"`
 
 	// Field:
 	//   fallback

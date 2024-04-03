@@ -143,6 +143,14 @@ type Site struct {
 	Keywords string `json:"keywords,omitempty"`
 
 	// Attribute:
+	//   blocklists
+	// Type:
+	//   string array
+	// Description:
+	//   Array of blocklist use for Rubicon
+	Blocklists []string `json:"blocklists,omitempty"`
+
+	// Attribute:
 	//   kwarray
 	// Type:
 	//   string
