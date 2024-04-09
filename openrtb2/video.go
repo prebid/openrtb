@@ -375,6 +375,15 @@ type Video struct {
 	CompanionType []adcom1.CompanionType `json:"companiontype,omitempty"`
 
 	// Attribute:
+	//   poddedupe
+	// Type:
+	//   enum array
+	// Description:
+	//   Indicates pod deduplication settings that will be applied to bid
+	//   responses. Refer to List: Pod Deduplication in AdCOM 1.0.
+	PodDedupe []adcom1.PodDedupe `json:"poddedupe,omitempty"`
+
+	// Attribute:
 	//   durfloors
 	// Type:
 	//   object array
