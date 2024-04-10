@@ -377,7 +377,7 @@ type Video struct {
 	// Attribute:
 	//   poddedupe
 	// Type:
-	//   enum array
+	//   enum array; provisional
 	// Description:
 	//   Indicates pod deduplication settings that will be applied to bid
 	//   responses. Refer to List: Pod Deduplication in AdCOM 1.0.
