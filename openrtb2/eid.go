@@ -10,12 +10,52 @@ import "encoding/json"
 type EID struct {
 
 	// Attribute:
+	//   inserter
+	// Type:
+	//   string
+	// Description:
+	//   The canonical domain name of the entity (publisher, publisher monetization
+	//   company, SSP, Exchange, Header Wrapper, etc.) that caused the ID array element
+	//   to be added. This may be the operational domain of the system, if that is
+	//   different from the parent corporate domain, to facilitate WHOIS and reverse IP
+	//   lookups to establish clear ownership of the delegate system.
+	//
+	//   This should be the same value as used to identify sellers in an ads.txt file if
+	//   one exists.
+	//
+	//   For ad tech intermediaries, this would be the domain as used in ads.txt. For
+	//   publishers, this would match the domain in the `site` or `app` object.
+	Inserter string `json:"inserter,omitempty"`
+
+	// Attribute:
+	//   matcher
+	// Type:
+	//   string
+	// Description:
+	//   Technology providing the match method as defined in mm.
+	//
+	//   In some cases, this may be the same value as inserter.
+	//
+	// When blank, it is assumed that the matcher is equal to the source
+	//
+	// May be omitted when mm=0, 1, or 2.
+	Matcher string `json:"matcher,omitempty"`
+
+	// Attribute:
+	//   mm
+	// Type:
+	//   integer
+	// Description:
+	//   Match method used by the matcher. Refer to List: Delivery Methods
+	//   in AdCOM 1.0.
+	MM int64 `json:"mm,omitempty"`
+
+	// Attribute:
 	//   source
 	// Type:
 	//   string
 	// Description:
-	//   Source or technology provider responsible for the set of
-	//   included IDs. Expressed as a top-level domain.
+	//   Canonical domain of the ID.
 	Source string `json:"source,omitempty"`
 
 	// Attribute:
