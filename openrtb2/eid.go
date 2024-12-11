@@ -1,6 +1,10 @@
 package openrtb2
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/prebid/openrtb/v20/adcom1"
+)
 
 // 3.2.27 Object: EID
 //
@@ -46,9 +50,9 @@ type EID struct {
 	// Type:
 	//   integer
 	// Description:
-	//   Match method used by the matcher. Refer to List: Delivery Methods
+	//   Match method used by the matcher. Refer to List: ID Match Methods
 	//   in AdCOM 1.0.
-	MM int64 `json:"mm,omitempty"`
+	MM adcom1.MatchMethod `json:"mm,omitempty"`
 
 	// Attribute:
 	//   source
