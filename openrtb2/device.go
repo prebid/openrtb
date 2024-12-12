@@ -266,6 +266,10 @@ type Device struct {
 	//   string
 	// Description:
 	//   ID sanctioned for advertiser use in the clear (i.e., not hashed).
+	//   Unless prior arrangements have been made between the buyer and the
+	//   seller directly, the value in this field is expected to be an ID
+	//   derived from a call to an advertising API provided by the device’s
+	//   Operating System.
 	IFA string `json:"ifa,omitempty"`
 
 	// Attribute:

@@ -14,8 +14,10 @@ type User struct {
 	// Type:
 	//   string; recommended
 	// Description:
-	//   Exchange-specific ID for the user. At least one of id or
-	//   buyeruid is recommended.
+	//   Exchange-specific ID for the user. At least one of id or buyeruid is
+	//   recommended. Unless prior arrangements have been made between the buyer
+	//   and the seller directly, the value in this field is expected to be derived
+	//   from an ID sync. See Appendix C (Cookie Based ID Syncing).
 	ID string `json:"id,omitempty"`
 
 	// Attribute:
@@ -23,8 +25,10 @@ type User struct {
 	// Type:
 	//   string; recommended
 	// Description:
-	//   Buyer-specific ID for the user as mapped by the exchange for
-	//   the buyer. At least one of buyeruid or id is recommended.
+	//   Buyer-specific ID for the user as mapped by the exchange for the buyer.
+	//   Unless prior arrangements have been made between the buyer and the seller
+	//   directly, the value in this field is expected to be derived from an ID sync.
+	//   See Appendix C (Cookie Based ID Syncing).
 	BuyerUID string `json:"buyeruid,omitempty"`
 
 	// Attribute:
