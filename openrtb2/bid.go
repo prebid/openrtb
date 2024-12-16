@@ -112,7 +112,7 @@ type Bid struct {
 	// Description:
 	//   Optional response for BidSwitch Native
 	//	 https://protocol.bidswitch.com/ssp-protocol/ssp-response-native-object.html
-	AdMNative native1.Response `json:"adm_native,omitempty"`
+	AdMNative *native1.Response `json:"adm_native,omitempty"`
 
 	// Attribute:
 	//   admobject
@@ -120,7 +120,7 @@ type Bid struct {
 	//   object
 	// Description:
 	//   Optional response for Rubicon Native
-	AdMObject NativeAdMObject `json:"admobject,omitempty"`
+	AdMObject *NativeAdMObject `json:"admobject,omitempty"`
 
 	// Attribute:
 	//   adid
