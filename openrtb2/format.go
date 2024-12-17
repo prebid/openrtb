@@ -1,7 +1,7 @@
 package openrtb2
 
 import (
-	"github.com/onfocusio/openrtb-adagio/common"
+	"github.com/prebid/openrtb/v20/common"
 )
 
 type Format = common.Format

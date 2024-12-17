@@ -2,7 +2,6 @@ package openrtb2
 
 import (
 	"encoding/json"
-
 	"github.com/prebid/openrtb/v20/adcom1"
 )
 
