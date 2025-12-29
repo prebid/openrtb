@@ -20,3 +20,10 @@ const (
 	CreativeVAST42         MediaCreativeSubtype = 13 // VAST 4.2
 	CreativeVAST42Wrapper  MediaCreativeSubtype = 14 // VAST 4.2 Wrapper
 )
+
+var MediaCreativeSubtypeORTBV26Only = map[MediaCreativeSubtype]bool{
+	CreativeVAST41:        true,
+	CreativeVAST41Wrapper: true,
+	CreativeVAST42:        true,
+	CreativeVAST42Wrapper: true,
+}

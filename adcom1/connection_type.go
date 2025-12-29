@@ -15,6 +15,10 @@ const (
 	Connection5G       ConnectionType = 7 // 7	Cellular Network - 5G
 )
 
+var ConnectionTypeORTBV26Only = map[ConnectionType]bool{
+	Connection5G: true,
+}
+
 // Ptr returns pointer to own value.
 func (c ConnectionType) Ptr() *ConnectionType {
 	return &c

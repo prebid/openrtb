@@ -12,3 +12,7 @@ const (
 	ExpandableFullScreen ExpandableDirection = 5 // Full Screen
 	ExpandableResize     ExpandableDirection = 6 // Resize/Minimize (make smaller)
 )
+
+var ExpandableDirectionORTBV26Only = map[ExpandableDirection]bool{
+	ExpandableResize: true,
+}

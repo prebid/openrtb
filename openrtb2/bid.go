@@ -104,6 +104,10 @@ type Bid struct {
 	//   Substitution macros (Section 4.4) may be included.
 	AdM string `json:"adm,omitempty"`
 
+	// AdMObj is used for the case when we receive not string-typed data in adm field
+	// In custom marshalers we cast object in string if it's possible
+	AdMObj interface{} `json:"-"`
+
 	// Attribute:
 	//   adid
 	// Type:
@@ -274,7 +278,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Width of the creative in device independent pixels (DIPS).
-	W int64 `json:"w,omitempty"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -282,7 +286,7 @@ type Bid struct {
 	//   integer
 	// Description:
 	//   Height of the creative in device independent pixels (DIPS).
-	H int64 `json:"h,omitempty"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wratio
@@ -351,4 +355,61 @@ type Bid struct {
 	// Description:
 	//   Placeholder for bidder-specific extensions to OpenRTB
 	Ext json.RawMessage `json:"ext,omitempty"`
+}
+
+// Used to unmarshal not string AdM
+// Receive as interface and try to marshal into string then
+func (bid *Bid) UnmarshalJSON(data []byte) error {
+	type Alias Bid
+	aliasedBid := &struct {
+		*Alias
+		AdM interface{} `json:"adm,omitempty"`
+	}{
+		Alias: (*Alias)(bid),
+	}
+
+	err := json.Unmarshal(data, &aliasedBid)
+	if err != nil {
+		return err
+	}
+
+	receivedAdM := aliasedBid.AdM
+	_, ok := receivedAdM.(string)
+	if ok {
+		bid.AdM = receivedAdM.(string)
+		return nil
+	}
+
+	if aliasedBid.AdM != nil {
+		// do not marshal nil to prevent adm: null in response
+
+		marshaledAdM, err := JSONMarshal(receivedAdM)
+		if err != nil {
+			return err
+		}
+
+		bid.AdM = string(marshaledAdM)
+
+		return nil
+	}
+
+	return nil
+}
+
+// If we need to send not string AdM we fill AdMObj in advance and then marshal bid with aliased adm field
+func (bid *Bid) MarshalJSON() ([]byte, error) {
+	if bid.AdMObj == nil {
+		return JSONMarshal(*bid)
+	}
+
+	type Alias Bid
+	aliasedBid := &struct {
+		*Alias
+		AdM interface{} `json:"adm"`
+	}{
+		Alias: (*Alias)(bid),
+		AdM:   bid.AdMObj,
+	}
+
+	return JSONMarshal(aliasedBid)
 }

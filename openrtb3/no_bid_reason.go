@@ -27,6 +27,16 @@ const (
 	NoBidBlockedSupplyChainNode    NoBidReason = 17 // Blocked SupplyChain Node
 )
 
+var NoBidReasonORTBV26Only = map[NoBidReason]bool{
+	NoBidAuthorizationUnavailable:  true,
+	NoBidAuthorizationViolation:    true,
+	NoBidAuthenticationUnavailable: true,
+	NoBidAuthenticationViolation:   true,
+	NoBidInsufficientTime:          true,
+	NoBidIncompleteSupplyChain:     true,
+	NoBidBlockedSupplyChainNode:    true,
+}
+
 // Ptr returns pointer to own value.
 func (n NoBidReason) Ptr() *NoBidReason {
 	return &n

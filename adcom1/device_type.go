@@ -15,3 +15,7 @@ const (
 	DeviceSetTopBox DeviceType = 7 // Set Top Box
 	DeviceOOH       DeviceType = 8 // OOH Device
 )
+
+var DeviveTypeORTBV26Only = map[DeviceType]bool{
+	DeviceOOH: true,
+}

@@ -15,7 +15,7 @@ type Format struct {
 	//   integer
 	// Description:
 	//   Width in device independent pixels (DIPS).
-	W int64 `json:"w,omitempty"`
+	W *uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -23,7 +23,7 @@ type Format struct {
 	//   integer
 	// Description:
 	//   Height in device independent pixels (DIPS).
-	H int64 `json:"h,omitempty"`
+	H *uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   wratio

@@ -16,6 +16,7 @@ import (
 // Among these are the Site and App objects, which describe the type of published media in which the impression(s) appear.
 // These objects are highly recommended, but only one applies to a given bid request depending on whether the media is browser-based web content or a non-browser application, respectively.
 type BidRequest struct {
+	ORTBVersion string `json:"-"`
 
 	// Attribute:
 	//   id

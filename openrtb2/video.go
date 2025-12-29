@@ -112,7 +112,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Width of the video player in device independent pixels (DIPS).
-	W *int64 `json:"w,omitempty"`
+	W uint64 `json:"w,omitempty"`
 
 	// Attribute:
 	//   h
@@ -120,7 +120,7 @@ type Video struct {
 	//   integer; recommended
 	// Description:
 	//   Height of the video player in device independent pixels (DIPS).
-	H *int64 `json:"h,omitempty"`
+	H uint64 `json:"h,omitempty"`
 
 	// Attribute:
 	//   podid

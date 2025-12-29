@@ -26,3 +26,7 @@ const (
 	AttrFlash                  CreativeAttribute = 17 // Adobe Flash
 	AttrResponsive             CreativeAttribute = 18 // Responsive; Sizeless; Fluid (i.e., creatives that dynamically resize to environment)
 )
+
+var CreativeAttributeORTBV26Only = map[CreativeAttribute]bool{
+	AttrResponsive: true,
+}

@@ -17,3 +17,9 @@ const (
 	APISIMID10 APIFramework = 8 // SIMID 1.0
 	APISIMID11 APIFramework = 9 // SIMID 1.1
 )
+
+var APIFrameworkORTBV26Only = map[APIFramework]bool{
+	APIOMID10:  true,
+	APISIMID10: true,
+	APISIMID11: true,
+}

@@ -41,6 +41,10 @@ type Native struct {
 	//   Markup Request Object, section 4.1 of OpenRTB Native 1.1+.
 	Request string `json:"request"`
 
+	// RequestObj is used for the case when we receive not string-typed data in request field
+	// In custom marshalers we cast object in string if it's possible
+	RequestObj interface{} `json:"-"`
+
 	// Attribute:
 	//   ver
 	// Type:
@@ -80,4 +84,54 @@ type Native struct {
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
 	Ext json.RawMessage `json:"ext,omitempty"`
+}
+
+// Used to unmarshal not string Request
+// Receive as interface and try to marshal into string then
+func (native *Native) UnmarshalJSON(data []byte) error {
+	type Alias Native
+	aliasedNative := &struct {
+		*Alias
+		Request interface{} `json:"request"`
+	}{
+		Alias: (*Alias)(native),
+	}
+
+	err := json.Unmarshal(data, &aliasedNative)
+	if err != nil {
+		return err
+	}
+
+	receivedNativeRequest := aliasedNative.Request
+	_, ok := receivedNativeRequest.(string)
+	if ok {
+		native.Request = receivedNativeRequest.(string)
+		return nil
+	}
+
+	marshaledNativeRequest, err := JSONMarshal(receivedNativeRequest)
+	if err != nil {
+		return err
+	}
+
+	native.Request = string(marshaledNativeRequest)
+	return nil
+}
+
+// If we need to send not string Request we fill RequestObj in advance and then marshal bid with aliased request field
+func (native *Native) MarshalJSON() ([]byte, error) {
+	if native.RequestObj == nil {
+		return JSONMarshal(*native)
+	}
+
+	type Alias Native
+	aliasedNative := &struct {
+		*Alias
+		Request interface{} `json:"request"`
+	}{
+		Alias:   (*Alias)(native),
+		Request: native.RequestObj,
+	}
+
+	return JSONMarshal(aliasedNative)
 }
