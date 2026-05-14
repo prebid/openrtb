@@ -129,7 +129,7 @@ const (
 	//   IE sponsored by BRAND on SITE (where SITE is transmitted in this field).
 	// Format:
 	//   text
-	DataAssetTypeDispayURL DataAssetType = 11
+	DataAssetTypeDisplayURL DataAssetType = 11
 
 	// Type ID:
 	//   12
