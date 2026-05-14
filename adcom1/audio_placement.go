@@ -40,11 +40,11 @@ type AudioPlacement struct {
 	// Attribute:
 	//   playmethod
 	// Type:
-	//   integer
+	//   integer array
 	// Definition:
-	//   Playback method in use for this placement.
+	//   Playback method(s) in use for this placement.
 	//   Refer to List: Playback Methods.
-	PlayMethod PlaybackMethod `json:"playmethod,omitempty"`
+	PlayMethod []PlaybackMethod `json:"playmethod,omitempty"`
 
 	// Attribute:
 	//   playend
