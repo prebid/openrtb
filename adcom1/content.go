@@ -166,7 +166,7 @@ type Content struct {
 	// Definition:
 	//   Media rating per IQG guidelines.
 	//   Refer to List: Media Ratings.
-	QAGMediaMRating MediaRating `json:"qagmediarating,omitempty"`
+	QAGMediaRating MediaRating `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   keywords
