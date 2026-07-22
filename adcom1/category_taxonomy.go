@@ -14,4 +14,6 @@ const (
 	CatTaxIABContent21  CategoryTaxonomy = 5 // IAB Tech Lab Content Category Taxonomy 2.1.
 	CatTaxIABContent22  CategoryTaxonomy = 6 // IAB Tech Lab Content Category Taxonomy 2.2.
 	CatTaxIABContent30  CategoryTaxonomy = 7 // IAB Tech Lab Content Category Taxonomy 3.0.
+	CatTaxIABProduct20  CategoryTaxonomy = 8 // IAB Tech Lab Ad Product Taxonomy 2.0
+	CatTaxIABContent31  CategoryTaxonomy = 9 // IAB Tech Lab Content Category Taxonomy 3.1
 )

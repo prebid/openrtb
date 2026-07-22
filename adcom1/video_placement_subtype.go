@@ -8,9 +8,13 @@ type VideoPlacementSubtype int8
 
 // Types of video placements derived largely from the IAB Digital Video Guidelines.
 const (
-	VideoPlacementInStream      VideoPlacementSubtype = 1 // In-Stream: Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).
-	VideoPlacementInBanner      VideoPlacementSubtype = 2 // In-Banner: Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format. The format relies on the existence of display ad inventory on the page for its delivery.
-	VideoPlacementInArticle     VideoPlacementSubtype = 3 // In-Article: Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.
-	VideoPlacementInFeed        VideoPlacementSubtype = 4 // In-Feed: Found in content, social, or product feeds.
-	VideoPlacementAlwaysVisible VideoPlacementSubtype = 5 // Interstitial/Slider/Floating: Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).
+	VideoPlacementInStream            VideoPlacementSubtype = 1 // In-Stream: Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).
+	VideoPlacementAccompanyingContent VideoPlacementSubtype = 2 // Accompanying Content: Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content.
+	VideoPlacementInterstitial        VideoPlacementSubtype = 3 // Interstitial: Video ads that are played without video content.
+	VideoPlacementNoContent           VideoPlacementSubtype = 4 // No Content/Standalone: Video ads that are played without streaming video content.
+	VideoPlacementPause               VideoPlacementSubtype = 5 // Pause: An ad present in streaming video content that the consumer has requested.
+	VideoPlacementScreensaver         VideoPlacementSubtype = 6 // Screensaver: An ad present, when OS/App Screen Saver are initiated.
+	VideoPlacementOverlay             VideoPlacementSubtype = 7 // Overlay: Ads occurring during program content and outside of the traditional ad break.
+	VideoPlacementSqueezeback         VideoPlacementSubtype = 8 // Squeezeback: Ads Alongside or Adjacent to Content, also known as L-Shape Ads & Double Box, are ads that occur during program content and outside of the traditional ad break.
+	VideoPlacementInScene             VideoPlacementSubtype = 9 // In-scene: A form of advertising that integrates branded elements directly within the content itself, rather than appearing as separate pre-roll, mid-roll, overlay, or display formats.
 )

@@ -67,6 +67,24 @@ type Content struct {
 	Genre string `json:"genre,omitempty"`
 
 	// Attribute:
+	//   genres
+	// Type:
+	//   string array
+	// Definition:
+	//   Unique ID(s) for the genre of the content as listed in the taxonomy defined by the gtax field.
+	Genres []string `json:"genres,omitempty"`
+
+	// Attribute:
+	//   gtax
+	// Type:
+	//   integer
+	// Definition:
+	//   The taxonomy in use.
+	//   If no gtax field is supplied, Content Category Taxonomy 3.1 is assumed
+	//   Refer to List: Category Taxonomies.
+	GTax CategoryTaxonomy `json:"gtax,omitempty"`
+
+	// Attribute:
 	//   album
 	// Type:
 	//   string
@@ -198,7 +216,17 @@ type Content struct {
 	//   string
 	// Definition:
 	//   Content language using ISO-639-1-alpha-2.
+	//   Only one of 'lang' or 'langb' should be present.
 	Lang string `json:"lang,omitempty"`
+
+	// Attribute:
+	//   langb
+	// Type:
+	//   string
+	// Definition:
+	//   Content language using IETF BCP 47.
+	//   Only one of 'lang' or 'langb' should be present.
+	LangB string `json:"langb,omitempty"`
 
 	// Attribute:
 	//   embed
@@ -244,6 +272,22 @@ type Content struct {
 	//   Each Data object represents a different data source.
 	//   Refer to Object: Data.
 	Data []Data `json:"data,omitempty"`
+
+	// Attribute:
+	//   realtime
+	// Type:
+	//   integer
+	// Definition:
+	//   Indicator of whether or not the event is happening in real time, where 0 = not real time, 1 = real time
+	Realtime int8 `json:"realtime,omitempty"`
+
+	// Attribute:
+	//   firstbroadcast
+	// Type:
+	//   integer
+	// Definition:
+	//   Indicator of whether or not this broadcast is the first time the content is available to an audience, where 0 = not first broadcast, 1 = first broadcast
+	FirstBroadcast int8 `json:"firstbroadcast,omitempty"`
 
 	// Attribute:
 	//   ext
