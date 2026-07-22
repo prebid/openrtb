@@ -67,6 +67,24 @@ type Content struct {
 	Genre string `json:"genre,omitempty"`
 
 	// Attribute:
+	//   gtax
+	// Type:
+	//   integer
+	// Definition:
+	//   The taxonomy in use.
+	//   If no gtax field is supplied, Content Category Taxonomy 3.1 is assumed
+	//   Refer to List: Category Taxonomies.
+	GTax CategoryTaxonomy `json:"gtax,omitempty"`
+
+	// Attribute:
+	//   genres
+	// Type:
+	//   string array
+	// Definition:
+	//   Unique ID(s) for the genre of the content as listed in the taxonomy defined by the gtax field.
+	Genres []string `json:"genres,omitempty"`
+
+	// Attribute:
 	//   album
 	// Type:
 	//   string
@@ -126,29 +144,29 @@ type Content struct {
 	Context ContentContext `json:"context,omitempty"`
 
 	// Attribute:
-	//   rating
+	//   contentrating
 	// Type:
 	//   string
 	// Definition:
 	//   Content rating (e.g., MPAA).
-	Rating string `json:"rating,omitempty"`
+	ContentRating string `json:"contentrating,omitempty"`
 
 	// Attribute:
-	//   urating
+	//   userrating
 	// Type:
 	//   string
 	// Definition:
 	//   User rating of the content (e.g., number of stars, likes, etc.).
-	URating string `json:"urating,omitempty"`
+	UserRating string `json:"userrating,omitempty"`
 
 	// Attribute:
-	//   mrating
+	//   qagmediarating
 	// Type:
 	//   integer
 	// Definition:
 	//   Media rating per IQG guidelines.
 	//   Refer to List: Media Ratings.
-	MRating MediaRating `json:"mrating,omitempty"`
+	QAGMediaMRating MediaRating `json:"qagmediarating,omitempty"`
 
 	// Attribute:
 	//   keywords
@@ -169,20 +187,20 @@ type Content struct {
 	KwArray []string `json:"kwarray,omitempty"`
 
 	// Attribute:
-	//   live
+	//   livestream
 	// Type:
 	//   integer
 	// Definition:
 	//   Indication of live content, where 0 = not live, 1 = live (e.g., stream, live blog).
-	Live int8 `json:"live,omitempty"`
+	LiveStream int8 `json:"livestream,omitempty"`
 
 	// Attribute:
-	//   srcrel
+	//   sourcerelationship
 	// Type:
 	//   integer
 	// Definition:
 	//   Source relationship, where 0 = indirect, 1 = direct.
-	SrcRel int8 `json:"srcrel,omitempty"`
+	SourceRelationship int8 `json:"sourcerelationship,omitempty"`
 
 	// Attribute:
 	//   len
@@ -193,20 +211,30 @@ type Content struct {
 	Len int64 `json:"len,omitempty"`
 
 	// Attribute:
-	//   lang
+	//   language
 	// Type:
 	//   string
 	// Definition:
 	//   Content language using ISO-639-1-alpha-2.
-	Lang string `json:"lang,omitempty"`
+	//   Only one of 'language' or 'langb' should be present.
+	Language string `json:"language,omitempty"`
 
 	// Attribute:
-	//   embed
+	//   langb
+	// Type:
+	//   string
+	// Definition:
+	//   Content language using IETF BCP 47.
+	//   Only one of 'language' or 'langb' should be present.
+	LangB string `json:"langb,omitempty"`
+
+	// Attribute:
+	//   embeddable
 	// Type:
 	//   integer
 	// Definition:
 	//   Indicator of whether or not the content is embedded off-site from the the site or app described in those objects (e.g., an embedded video player), where 0 = no, 1 = yes.
-	Embed int8 `json:"embed,omitempty"`
+	Embeddable int8 `json:"embeddable,omitempty"`
 
 	// Attribute:
 	//   producer
@@ -244,6 +272,22 @@ type Content struct {
 	//   Each Data object represents a different data source.
 	//   Refer to Object: Data.
 	Data []Data `json:"data,omitempty"`
+
+	// Attribute:
+	//   realtime
+	// Type:
+	//   integer
+	// Definition:
+	//   Indicator of whether or not the event is happening in real time, where 0 = not real time, 1 = real time
+	Realtime int8 `json:"realtime,omitempty"`
+
+	// Attribute:
+	//   firstbroadcast
+	// Type:
+	//   integer
+	// Definition:
+	//   Indicator of whether or not this broadcast is the first time the content is available to an audience, where 0 = not first broadcast, 1 = first broadcast
+	FirstBroadcast int8 `json:"firstbroadcast,omitempty"`
 
 	// Attribute:
 	//   ext
