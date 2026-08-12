@@ -215,9 +215,7 @@ type Bid struct {
 	// Type:
 	//   integer; DEPRECATED
 	// Description:
-	//   NOTE: Deprecated in favor of the apis integer array.
-	//   API required by the markup if applicable. Refer to List: API
-	//   Frameworks in AdCOM 1.0.
+	//   NOTE: Deprecated in favor of apis.
 	// Note:
 	//   OpenRTB <=2.5 defined only frameworks 1..6.
 	API adcom1.APIFramework `json:"api,omitempty"`

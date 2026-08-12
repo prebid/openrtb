@@ -36,7 +36,7 @@ type User struct {
 	// Type:
 	//   integer; DEPRECATED
 	// Description:
-	//   Year of birth as a 4-digit integer.
+	//   Deprecated as of OpenRTB 2.6.
 	Yob int64 `json:"yob,omitempty"`
 
 	// Attribute:
@@ -44,8 +44,7 @@ type User struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//   Gender, where “M” = male, “F” = female, “O” = known to be
-	//   other (i.e., omitted is unknown).
+	//   Deprecated as of OpenRTB 2.6.
 	Gender string `json:"gender,omitempty"`
 
 	// Attribute:

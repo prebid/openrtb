@@ -162,8 +162,7 @@ type Video struct {
 	// Type:
 	//   integer; DEPRECATED
 	// Description:
-	//   Video placement type for the impression. Refer to List:
-	//   Placement Subtypes - Video in AdCOM 1.0.
+	//   Deprecated as of OpenRTB 2.6-202303. Use plcmt instead.
 	Placement adcom1.VideoPlacementSubtype `json:"placement,omitempty"`
 
 	// Attribute:
@@ -222,9 +221,7 @@ type Video struct {
 	// Type:
 	//   integer; default 0; DEPRECATED
 	// Description:
-	//   If multiple ad impressions are offered in the same bid request,
-	//   the sequence number will allow for the coordinated delivery
-	//   of multiple creatives.
+	//   Deprecated as of OpenRTB 2.6. Use slotinpod.
 	Sequence int8 `json:"sequence,omitempty"`
 
 	// Attribute:

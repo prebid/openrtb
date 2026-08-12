@@ -116,9 +116,7 @@ type Audio struct {
 	// Type:
 	//   integer; default 0; DEPRECATED
 	// Description:
-	//   If multiple ad impressions are offered in the same bid request,
-	//   the sequence number will allow for the coordinated delivery
-	//   of multiple creatives.
+	//   Deprecated as of OpenRTB 2.6. Use slotinpod.
 	Sequence int64 `json:"sequence,omitempty"`
 
 	// Attribute:

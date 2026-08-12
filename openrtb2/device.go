@@ -277,7 +277,7 @@ type Device struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//   Hardware device ID (e.g., IMEI); hashed via SHA1.
+	//   Deprecated as of OpenRTB 2.6.
 	DIDSHA1 string `json:"didsha1,omitempty"`
 
 	// Attribute:
@@ -285,7 +285,7 @@ type Device struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//  Hardware device ID (e.g., IMEI); hashed via MD5.
+	//   Deprecated as of OpenRTB 2.6.
 	DIDMD5 string `json:"didmd5,omitempty"`
 
 	// Attribute:
@@ -293,7 +293,7 @@ type Device struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//   Platform device ID (e.g., Android ID); hashed via SHA1.
+	//   Deprecated as of OpenRTB 2.6.
 	DPIDSHA1 string `json:"dpidsha1,omitempty"`
 
 	// Attribute:
@@ -301,7 +301,7 @@ type Device struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//   Platform device ID (e.g., Android ID); hashed via MD5.
+	//   Deprecated as of OpenRTB 2.6.
 	DPIDMD5 string `json:"dpidmd5,omitempty"`
 
 	// Attribute:
@@ -309,7 +309,7 @@ type Device struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//   MAC address of the device; hashed via SHA1.
+	//   Deprecated as of OpenRTB 2.6.
 	MACSHA1 string `json:"macsha1,omitempty"`
 
 	// Attribute:
@@ -317,7 +317,7 @@ type Device struct {
 	// Type:
 	//   string; DEPRECATED
 	// Description:
-	//   MAC address of the device; hashed via MD5.
+	//   Deprecated as of OpenRTB 2.6.
 	MACMD5 string `json:"macmd5,omitempty"`
 
 	// Attribute:

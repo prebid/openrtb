@@ -11,7 +11,7 @@ type Content struct {
 	// Type:
 	//   string
 	// Definition:
-	//   ID uniquely identifying the content.
+	//   Publisher-provided ID uniquely identifying the content.
 	ID string `json:"id,omitempty"`
 
 	// Attribute:
@@ -61,10 +61,28 @@ type Content struct {
 	// Attribute:
 	//   genre
 	// Type:
-	//   string
+	//   string; DEPRECATED
 	// Definition:
 	//   Genre that best describes the content (e.g., rock, pop, etc).
+	//   NOTE: this field is deprecated, use 'genres' instead.
 	Genre string `json:"genre,omitempty"`
+
+	// Attribute:
+	//   genres
+	// Type:
+	//   string array
+	// Definition:
+	//   Array of genre IDs that describe the content using IDs from the taxonomy indicated in gtax.
+	Genres []string `json:"genres,omitempty"`
+
+	// Attribute:
+	//   gtax
+	// Type:
+	//   integer; default 9
+	// Definition:
+	//   The taxonomy in use for the genres attribute.
+	//   Refer to List: Category Taxonomies.
+	GTax CategoryTaxonomy `json:"gtax,omitempty"`
 
 	// Attribute:
 	//   album
@@ -173,7 +191,9 @@ type Content struct {
 	// Type:
 	//   integer
 	// Definition:
-	//   Indication of live content, where 0 = not live, 1 = live (e.g., stream, live blog).
+	//   An enumeration indicating the method of broadcast of the content where:
+	//   0 = the broadcast is not scheduled (e.g. it is VOD or otherwise user initiated).
+	//   1 = the broadcast is scheduled (also referred to as linear viewing).
 	Live int8 `json:"live,omitempty"`
 
 	// Attribute:
@@ -244,6 +264,26 @@ type Content struct {
 	//   Each Data object represents a different data source.
 	//   Refer to Object: Data.
 	Data []Data `json:"data,omitempty"`
+
+	// Attribute:
+	//   realtime
+	// Type:
+	//   integer
+	// Definition:
+	//   An enumeration indicating if the event is happening in real time while it is being watched where:
+	//   0 = not happening in real time (e.g., a replay).
+	//   1 = yes, happening in real time (e.g., a live sports game).
+	Realtime int8 `json:"realtime,omitempty"`
+
+	// Attribute:
+	//   firstbroadcast
+	// Type:
+	//   integer
+	// Definition:
+	//   An enumeration indicating whether this broadcast is the first time the content is available to an audience where:
+	//   0 = not first time being broadcast
+	//   1 = first time being broadcast
+	FirstBroadcast int8 `json:"firstbroadcast,omitempty"`
 
 	// Attribute:
 	//   ext

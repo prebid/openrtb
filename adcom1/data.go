@@ -23,6 +23,16 @@ type Data struct {
 	Name string `json:"name,omitempty"`
 
 	// Attribute:
+	//   cids
+	// Type:
+	//   string array
+	// Definition:
+	//   An array of Extended Content IDs, representing one or more identifiers
+	//   for the video or audio content from the ID source specified in the name
+	//   field of the data object.
+	CIDs []string `json:"cids,omitempty"`
+
+	// Attribute:
 	//   segment
 	// Type:
 	//   object array
