@@ -19,7 +19,7 @@ type Content struct {
 	// Type:
 	//   string
 	// Description:
-	//   ID uniquely identifying the content.
+	//   Publisher-provided ID uniquely identifying the content.
 	ID string `json:"id,omitempty"`
 
 	// Attribute:
@@ -76,6 +76,29 @@ type Content struct {
 	// Description:
 	//   Genre that best describes the content (e.g., rock, pop, etc).
 	Genre string `json:"genre,omitempty"`
+
+	// Attribute:
+	//   gtax
+	// Type:
+	//   integer; default 9
+	// Description:
+	//   The taxonomy in use. Refer to the AdCOM list List: Category
+	//   Taxonomies for values. If no gtax field is supplied, Content
+	//   Category Taxonomy 3.1 is assumed.
+	GTax adcom1.CategoryTaxonomy `json:"gtax,omitempty"`
+
+	// Attribute:
+	//   genres
+	// Type:
+	//   string array
+	// Description:
+	//   Unique ID(s) for the genre of the content as listed in the
+	//   taxonomy defined by the gtax field. If no gtax field is
+	//   supplied, subset of rows listed in CTV Genre Mapping of
+	//   Content Category Taxonomy 3.1 are assumed.
+	//   See Section 7.13 in Implementation Guidance for additional
+	//   detail.
+	Genres []string `json:"genres,omitempty"`
 
 	// Attribute:
 	//   album
@@ -204,7 +227,12 @@ type Content struct {
 	// Type:
 	//   integer
 	// Description:
-	//   0 = not live, 1 = content is live (e.g., stream, live blog).
+	//   An enumeration indicating the method of broadcast of the
+	//   content where:
+	//   0 = the broadcast is not scheduled (e.g. it is VOD or otherwise
+	//   user initiated).
+	//   1 = the broadcast is scheduled (also referred to as linear
+	//   viewing).
 	LiveStream *int8 `json:"livestream,omitempty"`
 
 	// Attribute:
@@ -274,6 +302,28 @@ type Content struct {
 	// Description:
 	//   Details about the channel (Section 3.2.24) the content is on.
 	Channel *Channel `json:"channel,omitempty"`
+
+	// Attribute:
+	//   realtime
+	// Type:
+	//   integer
+	// Description:
+	//   An enumeration indicating if the event is happening in real
+	//   time while it is being watched where:
+	//   0 = not happening in real time (e.g., a replay).
+	//   1 = yes, happening in real time (e.g., a live sports game).
+	Realtime *int8 `json:"realtime,omitempty"`
+
+	// Attribute:
+	//   firstbroadcast
+	// Type:
+	//   integer
+	// Description:
+	//   An enumeration indicating whether this broadcast is the first
+	//   time the content is available to an audience where:
+	//   0 = not first time being broadcast
+	//   1 = first time being broadcast
+	FirstBroadcast *int8 `json:"firstbroadcast,omitempty"`
 
 	// Attribute:
 	//   ext
