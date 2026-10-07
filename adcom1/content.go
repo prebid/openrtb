@@ -119,7 +119,7 @@ type Content struct {
 	// Attribute:
 	//   cattax
 	// Type:
-	//   integer
+	//   integer; default 1
 	// Definition:
 	//   The taxonomy in use for the cat attribute.
 	//   Refer to List: Category Taxonomies.
