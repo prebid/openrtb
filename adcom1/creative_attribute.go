@@ -25,4 +25,9 @@ const (
 	AttrHasSkipButton          CreativeAttribute = 16 // Ad Provides Skip Button (e.g. VPAID-rendered skip button on pre-roll video)
 	AttrFlash                  CreativeAttribute = 17 // Adobe Flash
 	AttrResponsive             CreativeAttribute = 18 // Responsive; Sizeless; Fluid (i.e., creatives that dynamically resize to environment)
+	AttrQRCode                 CreativeAttribute = 19 // Contains advertiser QR Code
+	AttrAlphaChannel           CreativeAttribute = 20 // Support alpha channel transparency
+	AttrStatic                 CreativeAttribute = 21 // Static Visual. Creative contains no perceptible motion and renders as a static visual, even if delivered in a video file format (e.g., MP4)
+	AttrLimitedMotion          CreativeAttribute = 22 // Limited Motion (Cinemagraph). Creative contains subtle or localized motion within an otherwise static composition.
+	AttrFullMotion             CreativeAttribute = 23 // Full-Motion Video. Creative contains continuous or scene-level motion typical of standard video assets
 )

@@ -5,11 +5,21 @@ import "encoding/json"
 // Restrictions object allows lists of restrictions on ad responses to be specified including specific content categories, advertisers, ads pertaining to specific apps, or creative attributes.
 type Restrictions struct {
 	// Attribute:
+	//   acat
+	// Type:
+	//   string array
+	// Definition:
+	//   Allowed content categories using IDs from the taxonomy indicated in cattax.
+	//   Only one of 'acat' or 'bcat' should be present.
+	ACat []string `json:"acat,omitempty"`
+
+	// Attribute:
 	//   bcat
 	// Type:
 	//   string array
 	// Definition:
 	//   Block list of content categories using IDs from the taxonomy indicated in cattax.
+	//   Only one of 'acat' or 'bcat' should be present.
 	BCat []string `json:"bcat,omitempty"`
 
 	// Attribute:

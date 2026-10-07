@@ -24,6 +24,35 @@ type ExtendedIdentifier struct {
 	UIDs []ExtendedIdentifierUID `json:"uids,omitempty"`
 
 	// Attribute:
+	//   inserter
+	// Type:
+	//   string
+	// Definition:
+	//   The canonical domain name of the entity (publisher, publisher monetization company, SSP, Exchange, Header Wrapper, etc.) that caused the ID array element to be added.
+	//   This should be the same value as used to identify sellers in an ads.txt file if one exists.
+	//   For ad tech intermediaries, this would be the domain as used in ads.txt. For publishers, this would match the domain in the 'site' or 'app' object.
+	Inserter string `json:"inserter,omitempty"`
+
+	// Attribute:
+	//   matcher
+	// Type:
+	//   string
+	// Definition:
+	//   Technology providing the match method as defined in 'mm'.
+	//   In some cases, this may be the same value as inserter.
+	//   When blank, it is assumed that the 'matcher' is equal to the 'source'.
+	//   May be omitted when mm=0, 1, or 2.
+	Matcher string `json:"matcher,omitempty"`
+
+	// Attribute:
+	//   mm
+	// Type:
+	//   integer
+	// Definition:
+	//   Match method used by the matcher. Refer to List: ID Match Methods
+	MM MatchMethod `json:"mm,omitempty"`
+
+	// Attribute:
 	//   ext
 	// Type:
 	//   object

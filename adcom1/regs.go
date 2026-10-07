@@ -23,6 +23,26 @@ type Regs struct {
 	GDPR int8 `json:"gdpr,omitempty"`
 
 	// Attribute:
+	//   gpp
+	// Type:
+	//   string
+	// Definition:
+	//   Contains the Global Privacy Platform’s consent string.
+	//   See the Global Privacy Platform specification for more details.
+	GPP string `json:"gpp,omitempty"`
+
+	// Attribute:
+	//   gpp_sid
+	// Type:
+	//   integer array
+	// Definition:
+	//   Array of the section(s) of the string which should be applied for this transaction.
+	//   Generally will contain one and only one value, but there are edge cases where more than one may apply.
+	//   GPP Section 3 (Header) and 4 (Signal Integrity) do not need to be included.
+	//   See the GPP Section Information for more details.
+	GPPSID []int8 `json:"gpp_sid,omitempty"`
+
+	// Attribute:
 	//   ext
 	// Type:
 	//   object

@@ -34,4 +34,44 @@ const (
 	// without streaming video content. This can be in placements like slideshows, native
 	// feeds, in-content or sticky/floating.
 	VideoPlcmtNoContent VideoPlcmtSubtype = 4
+
+	// VideoPlcmtPause represents an ad present in streaming video content that the consumer
+	// has requested. While there may be other content surrounding the player, the video
+	// content must be the focus of the user’s visit. It should remain the primary content
+	// on the page and the only video player in-view.
+	VideoPlcmtPause VideoPlcmtSubtype = 5
+
+	// VideoPlcmtScreensaver represents an ad present when OS/App Screen Saver is initiated.
+	VideoPlcmtScreensaver VideoPlcmtSubtype = 6
+
+	// VideoPlcmtOverlay represents ads occurring during program content and outside of the
+	// traditional ad break. The ad format places ad creatives over top of the program
+	// content, often as a banner or picture in picture execution. While there may be other
+	// content surrounding the player with the overlay, the player with the overlay must be
+	// the focus of the user’s visit. It should remain the primary content on the page and
+	// the primary video player in-view.
+	VideoPlcmtOverlay VideoPlcmtSubtype = 7
+
+	// VideoPlcmtSqueezeback represents ads Alongside or Adjacent to Content, also known as
+	// L-Shape Ads & Double Box, which are ads that occur during program content and outside
+	// of the traditional ad break. The program content is resized to allow for placement of
+	// an ad on the screen. In a squeezeback, none of the content is covered by the ad,
+	// instead it shares screen space with the ad. This is the major distinction between
+	// squeezeback and overlay. While there may be other content surrounding the player with
+	// the squeezeback, the player with the squeezeback must be the focus of the user visit.
+	// It should remain the primary content on the page and the primary video player in-view
+	VideoPlcmtSqueezeback VideoPlcmtSubtype = 8
+
+	// VideoPlcmtInScene represents a form of advertising that integrates branded elements
+	// directly within the content itself, rather than appearing as separate pre-roll,
+	// mid-roll, overlay, or display formats. In Scene Advertising is composited into the
+	// video content and blends the brand naturally into the scene, environment, or
+	// storyline, ensuring contextual relevance and viewer immersion without interrupting
+	// the user experience. In-scene ads typically consist of product placements or virtual
+	// out of A insertions. At this time, the standardization focuses on the out of home
+	// insertions in non-live content. While there may be other content surrounding the
+	// player with the in-scene ad, the player with the in-scene ad must be the focus of the
+	// user’s visit. It should remain the primary content on the page and the primary video
+	// player in-view.
+	VideoPlcmtInScene VideoPlcmtSubtype = 9
 )

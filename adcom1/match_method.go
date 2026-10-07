@@ -5,6 +5,8 @@ package adcom1
 type MatchMethod int64
 
 // Various ways an ID could be matched to an ad request
+//
+// Values of 500+ hold vendor-specific codes.
 const (
 	MatchMethodUnknown           MatchMethod = 0
 	MatchMethodNoMatch           MatchMethod = 1 // No matching has occurred. The associated ID came directly from a 3rd-party cookie or OS-provided resettable device ID for advertising (IFA).
