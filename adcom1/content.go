@@ -279,7 +279,7 @@ type Content struct {
 	//   integer
 	// Definition:
 	//   Indicator of whether or not the event is happening in real time, where 0 = not real time, 1 = real time
-	Realtime int8 `json:"realtime,omitempty"`
+	Realtime *int8 `json:"realtime,omitempty"`
 
 	// Attribute:
 	//   firstbroadcast
@@ -287,7 +287,7 @@ type Content struct {
 	//   integer
 	// Definition:
 	//   Indicator of whether or not this broadcast is the first time the content is available to an audience, where 0 = not first broadcast, 1 = first broadcast
-	FirstBroadcast int8 `json:"firstbroadcast,omitempty"`
+	FirstBroadcast *int8 `json:"firstbroadcast,omitempty"`
 
 	// Attribute:
 	//   ext
