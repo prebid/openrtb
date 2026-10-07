@@ -10,6 +10,7 @@ type Restrictions struct {
 	//   string array
 	// Definition:
 	//   Allowed content categories using IDs from the taxonomy indicated in cattax.
+	//   Only one of 'acat' or 'bcat' should be present.
 	ACat []string `json:"acat,omitempty"`
 
 	// Attribute:
@@ -18,6 +19,7 @@ type Restrictions struct {
 	//   string array
 	// Definition:
 	//   Block list of content categories using IDs from the taxonomy indicated in cattax.
+	//   Only one of 'acat' or 'bcat' should be present.
 	BCat []string `json:"bcat,omitempty"`
 
 	// Attribute:
