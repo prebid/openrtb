@@ -77,7 +77,7 @@ type Content struct {
 	// Attribute:
 	//   gtax
 	// Type:
-	//   integer
+	//   integer; default 9
 	// Definition:
 	//   The taxonomy in use.
 	//   If no gtax field is supplied, Content Category Taxonomy 3.1 is assumed
