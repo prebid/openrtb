@@ -82,9 +82,10 @@ type Content struct {
 	// Type:
 	//   integer; default 9
 	// Description:
-	//   The taxonomy in use. Refer to the AdCOM list List: Category
-	//   Taxonomies for values. If no gtax field is supplied, Content
-	//   Category Taxonomy 3.1 is assumed.
+	//   The taxonomy in use. Refer to list List: Category Taxonomies
+	//   in AdCOM 1.0 for values.
+	//   If no gtax field is supplied rows listed, Content Category
+	//   Taxonomy 3.1 is assumed
 	GTax adcom1.CategoryTaxonomy `json:"gtax,omitempty"`
 
 	// Attribute:
@@ -96,7 +97,7 @@ type Content struct {
 	//   taxonomy defined by the gtax field. If no gtax field is
 	//   supplied, subset of rows listed in CTV Genre Mapping of
 	//   Content Category Taxonomy 3.1 are assumed.
-	//   See Section 7.13 in Implementation Guidance for additional
+	//   See Section 7.13 of Implementation Guidance for additional
 	//   detail.
 	Genres []string `json:"genres,omitempty"`
 

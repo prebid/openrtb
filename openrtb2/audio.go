@@ -116,7 +116,7 @@ type Audio struct {
 	// Type:
 	//   integer; default 0; DEPRECATED
 	// Description:
-	//   Deprecated as of OpenRTB 2.6. Use slotinpod.
+	//   Deprecated as of OpenRTB 2.6. Use slotinpod
 	Sequence int64 `json:"sequence,omitempty"`
 
 	// Attribute:
