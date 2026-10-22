@@ -61,10 +61,9 @@ type Content struct {
 	// Attribute:
 	//   genre
 	// Type:
-	//   string; DEPRECATED
+	//   string
 	// Definition:
 	//   Genre that best describes the content (e.g., rock, pop, etc).
-	//   NOTE: this field is deprecated, use 'genres' instead.
 	Genre string `json:"genre,omitempty"`
 
 	// Attribute:
@@ -72,7 +71,9 @@ type Content struct {
 	// Type:
 	//   string array
 	// Definition:
-	//   Array of genre IDs that describe the content using IDs from the taxonomy indicated in gtax.
+	//   Unique ID(s) for the genre of the content as listed in the taxonomy defined by the gtax field.
+	//   If no gtax field is supplied, subset of rows listed in CTV Genre Mapping of Content Category Taxonomy 3.1 are assumed.
+	//   See Section 7.13 of Implementation Guidance for additional detail.
 	Genres []string `json:"genres,omitempty"`
 
 	// Attribute:
@@ -80,8 +81,8 @@ type Content struct {
 	// Type:
 	//   integer; default 9
 	// Definition:
-	//   The taxonomy in use for the genres attribute.
-	//   Refer to List: Category Taxonomies.
+	//   The taxonomy in use. Refer to list List: Category Taxonomies in AdCOM 1.0 for values.
+	//   If no gtax field is supplied rows listed, Content Category Taxonomy 3.1 is assumed
 	GTax CategoryTaxonomy `json:"gtax,omitempty"`
 
 	// Attribute:
@@ -273,7 +274,7 @@ type Content struct {
 	//   An enumeration indicating if the event is happening in real time while it is being watched where:
 	//   0 = not happening in real time (e.g., a replay).
 	//   1 = yes, happening in real time (e.g., a live sports game).
-	Realtime int8 `json:"realtime,omitempty"`
+	Realtime *int8 `json:"realtime,omitempty"`
 
 	// Attribute:
 	//   firstbroadcast
@@ -283,7 +284,7 @@ type Content struct {
 	//   An enumeration indicating whether this broadcast is the first time the content is available to an audience where:
 	//   0 = not first time being broadcast
 	//   1 = first time being broadcast
-	FirstBroadcast int8 `json:"firstbroadcast,omitempty"`
+	FirstBroadcast *int8 `json:"firstbroadcast,omitempty"`
 
 	// Attribute:
 	//   ext
